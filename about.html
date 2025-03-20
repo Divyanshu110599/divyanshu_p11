@@ -1,135 +1,258 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <!-- Meta tags for character set and viewport -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Full Stack Developer</title>
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-       
+        :root {
+            --primary-color: #27a819;
+            --secondary-color: #6c757d;
+            --bg-light: #080707;
+            --text-dark: #fafff8;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
         }
 
-       
-        header {
-            background-color: #020202;
-            color: #f7f3f3;
-            padding: 15px;
+        h1,
+        h2,
+        h3 {
+            /* color: var(--primary-color); */
+            color: aqua;
+        }
+
+        .progress-bar {
+            background-color: var(--primary-color);
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background: #dc3545;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background: #a71d2a;
+        }
+
+
+        hr {
+            height: 8px;
+            width: 80px;
             text-align: center;
-            border-radius: 20px;   
-            border: 2px solid black;
-            margin: 10px 20px;
+            position: relative;
+           background-color: aqua;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            border: 0;
         }
 
-      
-        h1 {
-            color: red;
-            margin: 0;
-            margin-top: 10px;
-            margin-left: 7px;
-        }
-
-      
-        h2 {
-            margin-left: 80px;
-        }
-
-       
-        p {
-            font-size: large;
-            margin-left: 80px;
-        }
-
-     
-        main {
-            margin: 0 20px;
-        }
-
-        
-        section {
-            margin-bottom: 55px;
-        }
-
-       
-        ul {
-            font-size: large;
-            padding: 0;
-            margin-left: 80px;
-        }
-
-       
-        footer {
-            background-color: #333;
-            color: #f7f3f3;
-            padding: 10px;
+        /* 
+        .btn {
+            background: #0fd9d9;
+            color: #090101;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             text-align: center;
-            border-radius: 30px;
-            border: 2px solid black;
-            margin: 0 20px;
-        }
-
-       
-        .logo {
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transition: transform .3s;
+            text-decoration: none;
             width: 100px;
+            height: 50px;
+            display: inline-block;
+            line-height: 10px;
+            padding-bottom: 10px;
         }
 
-       
+        .btn:hover {
+            transform: translateY(-3px);
+            color: #0b0a0a;
+            background: #e9ecef;
+        } */
 
-       
-        @media screen and (max-width: 768px) {
-           
-            h1, h2, p, ul {
-                margin-left: 20px;
+        .btn {
+            background: #06a9e9;
+            /* Background color for button */
+            color: #0a0909;
+            /* Text color for button */
+            text-transform: uppercase;
+            /* Uppercase text */
+            letter-spacing: 2px;
+            /* Letter spacing */
+            display: block;
+            /* Block display */
+            text-align: center;
+            /* Centered text */
+            border-radius: 5px;
+            /* Border radius */
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+            /* Box shadow */
+            transition: transform .3s;
+            /* Transition effect */
+            margin-left: 0px;
+            /* Margin left */
+            margin-top: 20px;
+            /* Margin top */
+            text-decoration: none;
+            /* No underline */
+            width: 150px;
+            /* Width of button */
+            height: 50px;
+            /* Height of button */
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            /* Button hover effect */
+            color: #0b0a0a;
+            /* Text color on hover */
+            background: #fff;
+        }
+
+        .btn--bg {
+            font-size: 2rem;
+            /* Font size for specific button */
+        }
+
+        .btn--med {
+            font-size: 1.6rem;
+            /* Font size for specific button */
+        }
+
+        .btn--theme {
+            background: #0062b9;
+            /* Background color for themed button */
+            color: #fff;
+            /* Text color for themed button */
+        }
+
+        .btn--theme-inv {
+            color: #0062b9;
+            /* Text color for inverted themed button */
+            background: #fff;
+            /* Background color for inverted themed button */
+            border: 2px solid #0062b9;
+            /* Border style */
+            box-shadow: none;
+            /* No box shadow */
+        }
+
+        a {
+            text-decoration: none;
+            color: #07c3e9;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .back-button {
+                font-size: 14px;
+                padding: 6px 10px;
+            }
+
+            .btn {
+                width: 120px;
+                height: 40px;
+                line-height: 40px;
+                font-size: 14px;
+            }
+
+            .profile-img {
+                max-width: 80%;
             }
         }
     </style>
 </head>
-<body class="background">
-    <!-- Header section -->
-    <header>
-        <h1>About Us</h1>
-    </header>
 
-    <!-- Main content -->
-    <main>
-        <!-- Introduction section -->
-        <section class="intro">
-            <div class="logo"><img src="https://trademaklogos.s3.ap-south-1.amazonaws.com/6124266.jpeg"></div>
-            <h1>Who We Are:</h1>
-            <p>We are a team of passionate full-stack developers dedicated to creating innovative web applications.</p>
-        </section>
+<body>
+    <a href="index.html" class="back-button">&#8592; Back</a>
 
-        <!-- Skills section -->
-        <section class="skills">
-            <h1>Our Skills:</h1>
-            <ul>
-                <li>Fundamentals</li><br>
-                <li>HTML,CSS,JavaScript</li><br>
-                <li>Automation & Manual Testing</li> <br>
-                <li>Mobile App Development</li> <br>
-                <li>Web App Development</li> <br>
-                <li>Database</li> <br>
-                <li>Devops</li> <br>
-                <li>Scrum Master</li> <br>
-            </ul>
-        </section>
-
+    <section class="container text-center py-5">
+        <h1>About Me</h1>
         <hr>
+        <!-- <hr class="line"> -->
+    </section>
 
-        <!-- Experience section -->
-        <section class="experience">
-            <h1>Training Head:</h1>
-            <h2>Yogesh Lolusare:</h2>
-            <span style="font-size: 18px;margin-left: 20px;">With 15+ years of experience in this field.</span>
-        </section>
-    </main>
+    <section class="container my-2">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="./assets/photo1-removebg.png" alt="Profile Image" class="img-fluid profile-img">
+            </div>
+            <div class="col-md-8">
+                <h3>Full Stack Developer</h3>
+                <p><em>Building interactive, beautiful, and user-friendly experiences.</em></p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><strong>DOB:</strong> 11 May 1999</p>
+                        <p><strong>Mobile Number :</strong> <a href="tel:+8208830672">8208830672</a></p>
+                        <p><strong>City:</strong> Nagpur, INDIA</p>
+                        <a href="resume.html" class="btn">Resume</a>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Age:</strong> 26</p>
+                        <p><strong>Degree:</strong> Bachelor of Engineering</p>
+                        <p><strong>Email:</strong> <a
+                                href="mailto:thakaredivyanshu7@gmail.com">thakaredivyanshu7@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer section -->
-    <footer>
-        <p>&copy; 2024 Full Stack Developer. All rights reserved.</p>
-    </footer>
+    <section class="container text-center py-4">
+        <h1>Skills</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <p>HTML</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 100%;">100%</div>
+                </div>
+                <p>JavaScript</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 90%;">90%</div>
+                </div>
+                <p>Node.js</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 85%;">85%</div>
+                </div>
+                <p>Bootstrap</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%;">80%</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>CSS</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 75%;">75%</div>
+                </div>
+                <p>PostgreSQL</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 75%;">75%</div>
+                </div>
+                <p>React.js</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%;">70%</div>
+                </div>
+                <p>Manual Testing</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 70%;">70%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

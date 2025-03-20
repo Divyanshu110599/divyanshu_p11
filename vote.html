@@ -2,16 +2,34 @@
 <html>
 
 <head>
-    <title>Age</title>
-
-    <!-- CSS Styles -->
+    <title>Age Verification</title>
     <style>
+        /* Background image styling */
         body {
-            background-color: rgb(6, 6, 6);
+            background-image: url(https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            background-repeat: no-repeat;
+            background-size: cover;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
 
+        /* Back button styling */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background: #dc3545;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        /* Centering the container */
         .container {
             display: flex;
             justify-content: center;
@@ -20,6 +38,7 @@
             height: 100vh;
         }
 
+        /* Input field styling */
         input {
             padding: 10px 20px;
             border-radius: 10px;
@@ -30,59 +49,81 @@
             font-size: 16px;
         }
 
+        /* Button styling */
         button {
             padding: 10px 20px;
             text-transform: uppercase;
             font-size: 18px;
             font-weight: bold;
-            background-color: black;
-            color: white;
+            background-color: rgb(19, 220, 83);
+            color: rgb(9, 9, 9);
             border: none;
             border-radius: 10px;
             cursor: pointer;
         }
 
-        .background {
-            background-image: url(./assets/pexels-cottonbro-4669141.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 100vw;
-            height: 100vh;
+        /* Result message styling */
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+            transition: opacity 0.5s;
         }
 
+        .eligible {
+            background-color: green;
+        }
 
-        @media only screen and (max-width: 600px) {
-            input {
-                width: 90%;
+        .not-eligible {
+            background-color: red;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
             }
 
-            @media only screen and (max-width: 400px) {
-                input {
-                    width: 100%;
-                }
+            input, button {
+                width: 100%;
+            }
+
+            .back-button {
+                font-size: 16px;
+                padding: 8px 12px;
             }
         }
     </style>
-
-    <!-- JavaScript for age calculation -->
     <script>
+        /* Function to calculate eligibility based on age */
         function calculate() {
-            let age = document.getElementById("age").value; / Get age input /
+            let age = document.getElementById("age").value;
+            let resultDiv = document.getElementById("result");
+
             if (age >= 18) {
-                document.write("Eligible For Voting");
+                resultDiv.innerText = "Eligible for Voting";
+                resultDiv.className = "result eligible";
             } else {
-                document.write("Not Eligible For Voting"); 
+                resultDiv.innerText = "Not Eligible for Voting";
+                resultDiv.className = "result not-eligible";
             }
+
+            resultDiv.style.display = "block";
+            resultDiv.style.opacity = "1";
         }
     </script>
 </head>
 
 <body class="background">
-  
+    <a href="project_js.html" class="back-button">&#8592; Back</a>
     <div class="container">
-        <input type="text" id="age" placeholder="Enter your age :">
-        <button type="submit" onclick="calculate()">click here</button> 
+        <input type="number" id="age" placeholder="Enter your age:" required>
+        <button type="submit" onclick="calculate()">Check Here</button>
+        <div id="result" class="result"></div>
     </div>
 </body>
 

@@ -1,0 +1,263 @@
+
+<!DOCTYPE html> <!-- Document type declaration for HTML5 -->
+<html lang="en"> <!-- Start of HTML document with English language -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Character encoding for UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Edge compatibility meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+    <title>Responsive Resume website html css</title> <!-- Title of the document -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Google Fonts link -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            /* Default font family */
+        }
+
+        body {
+            background: #f8f7f7;
+            /* Background color for body */
+        }
+
+        .container {
+            background: #f5f5f5;
+            /* Background color for main container */
+            max-width: 794px;
+            /* Adjusted width for A4 size (210mm x 297mm) */
+            margin: 60px auto;
+            /* Centered margin */
+            padding: 20px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+            /* Box shadow for container */
+            height: auto;
+            /* Auto height */
+            padding-bottom: 50px;
+            /* Additional padding for bottom */
+        }
+
+        .header {
+            text-align: center;
+            /* Center align header content */
+        }
+
+        .header h1 {
+            margin-bottom: 10px;
+            /* Margin bottom for header h1 */
+        }
+
+        .header h3 {
+            text-transform: uppercase;
+            /* Uppercase text for h3 */
+            font-size: 15px;
+            /* Font size */
+            font-weight: 500;
+            /* Font weight */
+        }
+
+        .img-area {
+            width: 200px;
+            /* Image area width */
+            height: 200px;
+            /* Image area height */
+            border-radius: 50%;
+            /* Circular border radius */
+            overflow: hidden;
+            margin: 25px auto;
+            /* Margin for centering */
+            border: 10px solid black;
+            /* Border style */
+        }
+
+        .img-area img {
+            width: 100%;
+            /* Image width */
+        }
+
+        .main {
+            display: flex;
+            /* Flex display for main content */
+            flex-wrap: wrap;
+            /* Wrap elements */
+        }
+
+        .left {
+            flex: 1;
+            /* Flex ratio */
+            padding: 30px;
+            /* Padding */
+        }
+
+        .left p {
+            line-height: 2;
+            /* Line height */
+        }
+
+        .left ul li {
+            line-height: 2;
+            /* Line height for list items */
+        }
+
+        h2 {
+            background: #00b6c4;
+            /* Background color for h2 */
+            padding: 15px;
+            /* Padding */
+            color: #fff;
+            /* Text color */
+            margin: 30px 0;
+            /* Margin */
+            font-size: 20px;
+            /* Font size */
+            border-radius: 0 50px 50px 0;
+            /* Border radius */
+        }
+
+        .right {
+            flex: 1;
+            /* Flex ratio */
+            padding: 30px;
+            /* Padding */
+        }
+
+        .right h3 {
+            margin-bottom: 15px;
+            /* Margin bottom for h3 */
+        }
+
+        .right p {
+            line-height: 2.9;
+            /* Line height */
+        }
+
+        .right ul li {
+            line-height: 2;
+            /* Line height for list items */
+        }
+
+        @page{
+            page: A4;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            .container {
+                width: 95%;
+                /* Adjusted width for medium screens */
+                height: auto;
+                /* Auto height */
+            }
+
+            h2 {
+                font-size: 18px;
+                /* Adjusted font size for h2 */
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .main {
+                flex-direction: column;
+                /* Flex direction for smaller screens */
+            }
+
+            .left,
+            .right {
+                flex: none;
+                /* No flex for smaller screens */
+                width: 100%;
+                /* Full width */
+            }
+
+            .container {
+                width: 95%;
+                /* Adjusted width for smaller screens */
+                height: auto;
+                /* Auto height */
+            }
+
+            h2 {
+                font-size: 15px;
+                /* Adjusted font size for h2 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="img-area">
+                <img src="./assets/photo1-removebg.png" alt=""> <!-- Image -->
+            </div>
+            <h1>DIVYANSHU THAKARE</h1> <!-- Name -->
+            <h3>Full-Stack Web Developer</h3> <!-- Title -->
+        </div>
+
+        <div class="main">
+            <div class="left">
+                <h2>Personal Information</h2>
+                <p><strong>Name :</strong> Divyanshu P. Thakare</p> <!-- Personal details -->
+                <p><strong>Age :</strong> 26</p>
+                <p><strong>Email :</strong> divyanshu110599@gmail.com</p>
+                <p><strong>Phone :</strong> 8208830672</p>
+                <p><strong>Address :</strong> Plot NO 35 Janki nagar Katol, Nagpur</p>
+                <p><strong>Linkedln : </strong><a
+                        href="https://www.linkedin.com/in/divyanshu-thakare-2b8187228">Connect</a></p>
+                <p><strong>GitHub link : </strong> <a
+                        href="https://github.com/Divyanshu110599/divyanshu_full_stack_developer">Project</a></p>
+                <h2>Education</h2> <!-- Education section -->
+                <h3>Diploma In Electrical</h3>
+                <p>University of RTMNU, 2015-2018</p> <!-- Education details -->
+                <h3>Degree In Electrical Engineering</h3>
+                <p>University of SPPU, 2018-2022</p>
+
+                <h2>Hobbies</h2> <!-- Hobbies section -->
+                <ul>
+                    <li>Travel and explore new cultures</li> <!-- Hobbies list -->
+                    <li>Sports, fitness or wellness</li>
+                    <li>Gaming or technology interests</li>
+                </ul>
+
+            </div>
+
+            <div class="right">
+                <h2>Work Experience</h2> <!-- Work experience section -->
+                <h3>Fresher</h3> <!-- Work experience details -->
+
+                <h2>Skills</h2> <!-- Skills section -->
+
+                <h3>Front-end stack</h3> <!-- Front-end skills -->
+                <hr> <!-- Horizontal rule -->
+                <ul>
+                    <li>HTML/CSS/XML/DOM</li> <!-- Skill list -->
+                    <li>JavaScript/JAVA/JQuery/React</li>
+                    <li>UI,UX</li>
+                    <li>Bootstrap</li>
+                    <li>Automation/Manual Testing</li>
+                </ul>
+
+                <h3>Back-end stack</h3> <!-- Back-end skills -->
+                <hr> <!-- Horizontal rule -->
+                <ul>
+                    <li>Python</li> <!-- Skill list -->
+                    <li>SQL</li>
+                    <li>Spring</li>
+                </ul>
+
+                <h3>Development & Operations</h3> <!-- DevOps skills -->
+                <hr> <!-- Horizontal rule -->
+                <ul>
+                    <li>Agile</li> <!-- Skill list -->
+                    <li>Scrum</li>
+                    <li>GIT</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

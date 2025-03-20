@@ -26,8 +26,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            /* background-color: #e4e4e4; */
-            background: linear-gradient(#000428, #004e92);
+            background-color: #e4e4e4;
             transition: background-color 0.3s ease;
         }
 
@@ -37,7 +36,7 @@
             top: 20px;
             left: 20px;
             padding: 10px 15px;
-            background: #dc3545;
+            background: #050505;
             color: white;
             text-decoration: none;
             font-size: 18px;
@@ -246,7 +245,6 @@
         }
 
 
-
         /* Responsive styles */
         @media only screen and (max-width: 768px) {
             .back-button {
@@ -260,45 +258,66 @@
 <body>
 
     <!-- Back Button (Positioned at the Top-Left) -->
-    <a href="index.html" class="back-button">&#8592; Back</a>
+    <a href="project.html" class="back-button">&#8592; Back</a>
 
-    <h1>My Projects</h1> <!-- Main heading for the page -->
+
+    <h1>Test Cases</h1> <!-- Main heading for the page -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search projects..." class="search-container">
+        <!-- Search input field -->
+    </div>
+    <div class="theme-switch-wrapper"> <!-- Theme switch wrapper -->
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox"> <!-- Checkbox input for theme switch -->
+            <div class="slider round"></div> <!-- Slider for theme switch -->
+        </label>
+    </div>
+
 
 
     <main>
         <!-- Project cards section -->
-
         <div class="project">
-            <a href="project_js.html"><img
-                    src="https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_1280.png"
-                    alt="Top 3 freedom fighters of India "></a> <!-- Image link for the project -->
+            <a
+                href="https://docs.google.com/spreadsheets/d/1yfQiF7gw3eBl1LmsdfmcwJ5FrQei39Fj0iWqyr3frV4/edit?usp=sharing"><img
+                    src="https://cdn.iconscout.com/icon/premium/png-512-thumb/white-board-8367002-6645205.png?f=webp&w=512"
+                    alt=""></a> <!-- Image link for the project -->
             <div class="project-description">
-                <p> Project</p> <!-- Project description -->
+                <p> Test Case On White Board</p> <!-- Project description -->
             </div>
         </div>
+
         <div class="project">
-            <a href="bootstrap_js.html"><img
-                    src="https://cdn.iconscout.com/icon/free/png-512/free-bootstrap-logo-icon-download-in-svg-png-gif-file-formats--wordmark-programming-langugae-language-pack-logos-icons-1175203.png?f=webp&w=256"
-                    alt="India Flag"></a> <!-- Image link for the project -->
+            <a
+                href="https://docs.google.com/spreadsheets/d/1G1QI0z8R9d7is1-7KCc3t0ARbDNoXx0m9F4-fqeb7pE/edit?usp=sharing"><img
+                    src="https://cdn.iconscout.com/icon/premium/png-512-thumb/login-page-2446022-2066957.png?f=webp&w=512"
+                    alt=""></a> <!-- Image link for the project -->
             <div class="project-description">
-                <p> Project</p> <!-- Project description -->
+                <p> Test Case On Login Page</p> <!-- Project description -->
+            </div>
+        </div>
+
+        <div class="project">
+            <a href=""><img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/keyboard-1-64587.png?f=webp&w=512"
+                    alt=""></a> <!-- Image link for the project -->
+            <div class="project-description">
+                <p> Test Case On Keyboard</p> <!-- Project description -->
             </div>
         </div>
         <div class="project">
             <a href=""><img
-                    src="https://cdn.iconscout.com/icon/free/png-512/free-react-logo-icon-download-in-svg-png-gif-file-formats--company-brand-world-logos-vol-4-pack-icons-282599.png?f=webp&w=256"
-                    alt="Registration page"></a> <!-- Image link for the project -->
+                    src="https://cdn.iconscout.com/icon/premium/png-512-thumb/mouse-1894640-1605491.png?f=webp&w=512"
+                    alt=""></a> <!-- Image link for the project -->
             <div class="project-description">
-                <p> Project</p> <!-- Project description -->
+                <p> Test Case On Mouse</p> <!-- Project description -->
             </div>
         </div>
-
         <div class="project">
-            <a href="manual.html"><img
-                    src="https://cdn.iconscout.com/icon/premium/png-512-thumb/manual-3903548-3253149.png?f=webp&w=256"
-                    alt="Registration page"></a> <!-- Image link for the project -->
+            <a href=""><img
+                    src="https://cdn.iconscout.com/icon/premium/png-512-thumb/fan-1541067-1307454.png?f=webp&w=256"
+                    alt=""></a> <!-- Image link for the project -->
             <div class="project-description">
-                <p> Project</p> <!-- Project description -->
+                <p>Test Case On Fan</p> <!-- Project description -->
             </div>
         </div>
 

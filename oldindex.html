@@ -1,0 +1,376 @@
+<!DOCTYPE html> <!-- Document type declaration for HTML5 -->
+<html>
+
+<head>
+    <!-- Meta tags and stylesheets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Bootstrap icons stylesheet -->
+    <title>Portfolio</title> <!-- Title of the document -->
+    <!-- Internal styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+        /* Google Fonts import */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Font family for the body */
+            max-height: 100vh;
+            /* Maximum height of the body */
+            background-color: #0d0d0d;
+            /* Background color */
+        }
+
+        header {
+            padding: 1.7rem 1rem;
+            /* Padding for header */
+            background-color: #fff;
+            /* Background color for header */
+            display: flex;
+            justify-content: space-between;
+            max-width: 80%;
+            /* Maximum width for header */
+            margin: auto;
+            /* Centering header horizontally */
+            align-items: center;
+            background-color: transparent;
+            /* Transparent background */
+        }
+
+        nav a {
+            color: #f50909;
+            /* Link color */
+            text-decoration: none;
+            /* No underline */
+            font-size: 22px;
+            /* Font size */
+            font-weight: 600;
+            /* Font weight */
+            letter-spacing: .7px;
+            /* Letter spacing */
+            padding: 1rem;
+            /* Padding for links */
+            padding: 0.4rem 1rem;
+            /* Additional padding for links */
+        }
+
+        nav a.active,
+        nav a:hover {
+            color: #17e239;
+            /* Hover color */
+            border-radius: 1rem;
+            /* Border radius */
+            transition: all.3s ease-in-out;
+            /* Transition effect */
+        }
+
+        #click {
+            display: none;
+            /* Hidden checkbox input */
+        }
+
+        .menu i {
+            color: #00E8F8;
+            /* Icon color */
+        }
+
+        .menu {
+            display: none;
+            /* Hidden menu initially */
+        }
+
+        section {
+            margin: 2rem 8.5rem;
+            /* Margin for section */
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5rem auto;
+            /* Margin for main section */
+        }
+
+        .main h1 {
+            font-size: 2.5rem;
+            /* Font size for heading */
+            font-weight: 600;
+            /* Font weight for heading */
+            color: #fff;
+            /* Text color */
+        }
+
+        .main p {
+            margin-top: 1rem;
+            /* Margin top for paragraph */
+            font-size: .98rem;
+            /* Font size for paragraph */
+            color: #fff;
+            /* Text color */
+        }
+
+        .social {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            /* Gap between social links */
+            margin-top: 2rem;
+            /* Margin top for social links */
+        }
+
+        .social a {
+            color: #0a0a0a;
+            /* Link color */
+            font-size: 30px;
+            /* Font size */
+            border: 1.6px solid #0d0d0d;
+            /* Border style */
+            background-color: #fcfbfb;
+            border-radius: 50%;
+            /* Border radius */
+            padding: 10px;
+            /* Padding for social links */
+            text-align: center;
+            width: 60px;
+            /* Width of social links */
+            height: 40px;
+            /* Height of social links */
+        }
+
+        .social a:hover {
+            color: #32c7db;
+            /* Hover color */
+            background-color: #0d0d0d;
+            /* Background color on hover */
+            box-shadow: 0 0 20px #0b0b0b;
+            /* Box shadow on hover */
+            transition: all .3s ease-in-out;
+            /* Transition effect */
+        }
+
+        .main h1 span:nth-child(1) {
+            font-size: 1.5rem;
+            /* Font size for specific span */
+        }
+
+        .main h1 span:nth-child(2) {
+            color: #00E8F8;
+            /* Text color for specific span */
+        }
+
+        .btn {
+            background: #fff;
+            /* Background color for button */
+            color: #333;
+            /* Text color for button */
+            text-transform: uppercase;
+            /* Uppercase text */
+            letter-spacing: 2px;
+            /* Letter spacing */
+            display: block;
+            /* Block display */
+            text-align: center;
+            /* Centered text */
+            border-radius: 5px;
+            /* Border radius */
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+            /* Box shadow */
+            transition: transform .3s;
+            /* Transition effect */
+            margin-left: 50px;
+            /* Margin left */
+            margin-top: 50px;
+            /* Margin top */
+            text-decoration: none;
+            /* No underline */
+            width: 150px;
+            /* Width of button */
+            height: 40px;
+            /* Height of button */
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            /* Button hover effect */
+            color: #000000;
+            /* Text color on hover */
+        }
+
+        .btn--bg {
+            font-size: 2rem;
+            /* Font size for specific button */
+        }
+
+        .btn--med {
+            font-size: 1.6rem;
+            /* Font size for specific button */
+        }
+
+        .btn--theme {
+            background: #0062b9;
+            /* Background color for themed button */
+            color: #fff;
+            /* Text color for themed button */
+        }
+
+        .btn--theme-inv {
+            color: #0062b9;
+            /* Text color for inverted themed button */
+            background: #fff;
+            /* Background color for inverted themed button */
+            border: 2px solid #0062b9;
+            /* Border style */
+            box-shadow: none;
+            /* No box shadow */
+        }
+
+        .images {
+            background-image: url(./assets/pexels-hngstrm-1793525.jpg);
+            /* Background image (empty for now) */
+            background-repeat: no-repeat;
+            /* No repeat */
+            background-position: 0 -75px;
+            /* Background position */
+            -webkit-box-shadow: 0 10px 10px -10px #000000;
+            /* Box shadow for Webkit */
+            -moz-box-shadow: 0 10px 10px -10px #000000;
+            /* Box shadow for Mozilla */
+            box-shadow: 0px 16px 4px -10px #080808;
+            /* Box shadow */
+            width: 528px;
+            /* Width */
+            background-size: cover;
+            /* Cover background */
+        }
+
+        .background {
+            background-image: url(../assets/pexels-madebymath-331684.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @keyframes check {
+            0% {
+                transform: translateY(-100px);
+                /* Animation transform */
+                opacity: 0;
+                /* Animation opacity */
+            }
+
+            100% {
+                transform: translateY(0);
+                /* Animation transform */
+                opacity: 1;
+                /* Animation opacity */
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .menu {
+                display: block;
+                /* Block display for menu */
+                font-size: 1.5rem;
+                /* Font size for menu */
+                font-weight: bold;
+                /* Font weight for menu */
+                color: #244D61;
+                /* Text color for menu */
+            }
+
+            header {
+                padding: 0.7rem 1rem;
+                /* Padding for header */
+                align-items: center;
+                /* Centered alignment */
+                max-width: 100%;
+                /* Maximum width */
+            }
+
+            nav {
+                position: absolute;
+                /* Absolute positioning */
+                display: grid;
+                /* Grid display */
+                top: 75px;
+                /* Top position */
+                text-align: center;
+                /* Centered text */
+                background-color: #1F252E;
+                /* Background color */
+                left: -100%;
+                /* Left position */
+                z-index: 1;
+                /* Z-index */
+                width: 100%;
+                /* Width */
+            }
+
+            #click:checked~nav {
+                left: 0%;
+                /* Left position on click */
+                transition: all 0.3s ease;
+                /* Transition effect */
+            }
+
+            section {
+                margin: 1rem 1.5rem;
+                /* Margin for section */
+            }
+        }
+    </style>
+</head>
+
+<body class="background">
+    <!-- Body of the HTML document -->
+    <header>
+        <!-- Header section with navigation -->
+        <input type="checkbox" id="click"> <!-- Checkbox input -->
+        <label for="click" class="mainicon">
+            <div class="menu">
+                <i class="bi bi-list"></i> <!-- Menu icon -->
+            </div>
+        </label>
+        <nav>
+            <!-- Navigation links -->
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Project</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section>
+        <!-- Main section of the webpage -->
+        <div class="main">
+            <div class="detail">
+                <h1><span>Hi,</span> <br> I'm <span style="color:#00E8F8;">Divyanshu</span></h1>
+                <!-- Heading with name -->
+                <p>I'm a <h2 style="color: #00E8F8; font-weight: bolder;">Full Stack Developer</h2></p> <!-- Description paragraph -->
+                <a href="resume.html" class="btn btn--med btn--theme dynamicBgClr">Resume</a> <!-- Button link -->
+                <div class="social">
+                    <!-- Social media links -->
+                    <a href="https://www.linkedin.com/in/divyanshu-thakare-2b8187228"><i class="bi bi-linkedin"></i></a>
+
+                    <a href="https://github.com/Divyanshu110599/divyanshu_full_stack_developer"><i
+                            class="bi bi-github"></i></a>
+                    <a href="https://join.skype.com/invite/tnbPlqreCs9w"><i class="bi bi-skype"></i></a>
+
+                </div>
+            </div>
+            <div class="images">
+                <!-- Placeholder for an image -->
+                <img src="./assets/photo1-removebg-removebg-preview.png" alt="" width="80%" height="500px">
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,395 @@
+/* Back button styling */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 15px;
+    background: #dc3545;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+   .back-button {
+       font-size: 16px;
+       padding: 5px 9px; 
+   }
+}
+
+
+ <!-- Back Button (Positioned at the Top-Left) -->
+ <a href="project_js.html" class="back-button">&#8592; Back</a>
+
+
+
+
+ <!DOCTYPE html> <!-- Document type declaration for HTML5 -->
+<html lang="en"> <!-- Start of HTML document with English language -->
+
+<head>
+
+    <title>Document</title> <!-- Title of the document -->
+    <style>
+        /* CSS styles for various elements */
+
+        /* Body styles */
+        .body {
+            /* Font family settings */
+            font-family: sans-serif;
+            font-family: 'Source Sans Pro', sans-serif;
+            /* Example of another font family */
+        }
+
+
+        /* Main heading styles */
+        .heading-sec__main {
+            display: block;
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            letter-spacing: 3px;
+            /* Repeated property */
+            text-align: center;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+
+        /* Styling for light mode in main heading */
+        .heading-sec__main--lt {
+            color: #fff;
+            /* White color */
+        }
+
+        /* Pseudo-element after main heading */
+        .heading-sec__main::after {
+            content: '';
+            /* Empty content */
+            position: absolute;
+            top: calc(100% + 1.5rem);
+            /* Positioning */
+            height: 5px;
+            /* Size of the line */
+            width: 3rem;
+            background: #141415;
+            /* Background color */
+            left: 50%;
+            /* Centered horizontally */
+            transform: translateX(-50%);
+            /* Centering adjustment */
+            border-radius: 5px;
+            /* Rounded corners */
+        }
+
+
+
+
+        /* Sub-heading styles */
+        .heading-sec__sub {
+            display: block;
+            text-align: center;
+            color: #fbf8f8;
+            /* Text color */
+            font-size: 2rem;
+            font-weight: 500;
+            /* Font weight */
+            max-width: 80rem;
+            /* Maximum width */
+            margin: auto;
+            /* Centered horizontally */
+            line-height: 1.6;
+            /* Line height */
+        }
+
+
+
+        /* Styles for light mode in sub-heading */
+        .heading-sec__sub--lt {
+            color: #fdfcfc;
+            /* White color */
+        }
+
+        /* Small heading styles */
+        .heading-sm {
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            /* Letter spacing */
+        }
+
+        /* Main container styles */
+        .main-container {
+            max-width: 120rem;
+            /* Maximum width */
+            margin: auto;
+            /* Centered horizontally */
+            width: 92%;
+            /* Width */
+            background-image: url(./assets/pexels-joshsorenson-1714205.jpg);
+            /* Background image */
+            background-repeat: no-repeat;
+            /* No repeat */
+            background-size: cover;
+            /* Cover size */
+        }
+
+        /* Button styles */
+        .btn {
+            background: #fff;
+            /* Background color */
+            color: #fcfafa;
+            /* Text color */
+            text-transform: uppercase;
+            /* Uppercase text */
+            letter-spacing: 2px;
+            /* Letter spacing */
+            display: inline-block;
+            /* Inline block display */
+            font-weight: 700;
+            /* Font weight */
+            border-radius: 5px;
+            /* Rounded corners */
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+            /* Box shadow */
+            transition: transform .3s;
+            /* Transition effect */
+            margin-left: 80px;
+            /* Left margin */
+            text-decoration: none;
+            /* No text decoration */
+        }
+
+        /* Button hover effect */
+        .btn:hover {
+            transform: translateY(-3px);
+            /* Translate effect on hover */
+        }
+
+        /* Button sizes */
+        .btn--bg {
+            padding: 1.5rem 8rem;
+            /* Padding */
+            font-size: 2rem;
+            /* Font size */
+        }
+
+        .btn--med {
+            padding: 1.5rem 5rem;
+            /* Padding */
+            font-size: 1.6rem;
+            /* Font size */
+        }
+
+        /* Button theme styles */
+        .btn--theme {
+            background: #0062b9;
+            /* Background color */
+            color: #fff;
+            /* Text color */
+        }
+
+        .btn--theme-inv {
+            color: #0062b9;
+            /* Text color */
+            background: #fff;
+            /* Background color */
+            border: 2px solid #0062b9;
+            /* Border */
+            box-shadow: none;
+            /* No box shadow */
+            padding: calc(1.5rem - 2px) calc(5rem - 2px);
+            /* Padding */
+        }
+
+        /* Padding for sections */
+        .sec-pad {
+            padding-top: 30px;
+            /* Top padding */
+        }
+
+
+
+        /* Primary text styles */
+        .text-primary {
+            color: #fff;
+            /* Text color */
+            font-size: 2.2rem;
+            /* Font size */
+            text-align: center;
+            /* Centered text */
+            width: 100%;
+            /* Full width */
+            line-height: 1.6;
+            /* Line height */
+        }
+
+        /* Hidden element */
+        .d-none {
+            display: none;
+            /* Hidden display */
+        }
+
+        /* About section styles */
+        .about {
+            color: rgb(243, 242, 245);
+            /* Text color */
+        }
+
+        /* About content grid layout */
+        .about__content {
+            display: grid;
+            /* Grid display */
+            grid-template-columns: 1fr 1fr;
+            /* Two columns */
+            grid-gap: 10rem;
+            /* Gap between columns */
+        }
+
+        /* about footer */
+        .footer_b {
+            background-color: #333;
+            color: #f7f3f3;
+            padding: 10px;
+            text-align: center;
+            border-radius: 30px;
+            border: 2px solid black;
+            margin: 0 20px;
+        }
+
+
+        /* About content title styles */
+        .about__content-title {
+            font-weight: 700;
+            /* Font weight */
+            font-size: 2.8rem;
+            /* Font size */
+        }
+
+        /* About content paragraph styles */
+        .about__content-details-para {
+            font-size: 1.8rem;
+            /* Font size */
+            color: #ffffff;
+            /* Text color */
+            max-width: 60rem;
+            /* Maximum width */
+            line-height: 1.7;
+            /* Line height */
+            margin-bottom: 1rem;
+            /* Bottom margin */
+            margin-left: 100px;
+            /* Left margin */
+        }
+
+        /* Highlighted part of about content paragraph */
+        .about__content-details-para--hl {
+            font-weight: 700;
+            /* Font weight */
+            margin: 0 3px;
+            /* Margin */
+        }
+
+        /* Last child margin adjustment for about content paragraph */
+        .about__content-details-para:last-child {
+            margin-bottom: 4rem;
+            /* Bottom margin */
+        }
+
+        /* Skills section styles */
+        .skills {
+            display: flex;
+            /* Flex display */
+            flex-wrap: wrap;
+            /* Wrap items */
+        }
+
+        /* Skill item styles */
+        .skills__skill {
+            padding: 1rem 2rem;
+            /* Padding */
+            margin-bottom: 1.5rem;
+            /* Bottom margin */
+            margin-right: 1.5rem;
+            /* Right margin */
+            font-size: 1.6rem;
+            /* Font size */
+            background: rgb(15, 0, 0);
+            /* Background color */
+            border-radius: 5px;
+            /* Rounded corners */
+            font-weight: 600;
+            /* Font weight */
+            color: #fdfcfc;
+            /* Text color */
+        }
+    </style>
+</head>
+
+<body class="main-container"> <!-- Start of the body with a class for styling -->
+
+    <section id="about" class="about sec-pad"> <!-- About section with ID and classes -->
+
+        <h2 class="heading heading-sec
+
+ heading-sec__mb-med"> <!-- Main heading with multiple classes -->
+            <span class="heading-sec__main">About Me</span> <!-- Main heading text -->
+            <hr> <!-- Horizontal rule -->
+            <span class="heading-sec__sub"> <br> <!-- Sub-heading text -->
+                I am a full-stack developer committed to creating innovative web applications. My interests include
+                front-end and back-end development, system management, and mobile applications. As you can see, I am
+                passionate about all aspects of application development.
+
+            </span>
+        </h2>
+
+        <div class="about__content"> <!-- About content grid container -->
+            <div class="about__content-main"> <!-- Main content section -->
+                <h3 class="about__content-title">Get to know me!</h3> <!-- Subtitle -->
+                <div class="about__content-details"> <!-- Details section -->
+                    <p class="about__content-details-para">
+                        <strong>! I am
+                            Divyanshu Thakare
+                            and I'm a <strong> Full Stack Developer located in
+                                Nagpur </strong>
+                    </p> <!-- Paragraph with strong tags -->
+                    <p class="about__content-details-para">
+                        I have attached my resume for your consideration
+                        <strong>Resume</strong>
+                    </p> <!-- Another paragraph with strong tag -->
+                </div>
+                <a href="resume.html" class="btn btn--med btn--theme dynamicBgClr">Resume</a> <!-- Button for resume -->
+            </div>
+
+            <div class="about__content-skills"> <!-- Skills section -->
+                <h3 class="about__content-title">My Skills</h3> <!-- Skills title -->
+                <div class="skills"> <!-- Skills container -->
+                    <div class="skills__skill">HTML</div> <!-- Skill items -->
+                    <div class="skills__skill">CSS</div>
+                    <div class="skills__skill">JavaScript</div>
+                    <div class="skills__skill">Java, Python, Swift, React</div>
+                    <div class="skills__skill">Automation Testing</div>
+                    <div class="skills__skill">Manual Testing</div>
+                    <div class="skills__skill">Web App Development</div>
+                    <div class="skills__skill">Mobile App Development</div>
+                    <div class="skills__skill">Android</div>
+                    <div class="skills__skill">IOS</div>
+                </div>
+            </div>
+
+        </div> <!-- End of about content -->
+
+    </section> <!-- End of about section -->
+
+    <footer class="footer_b"> <!-- Footer section -->
+        <p>&copy; 2024 Full Stack Developer. All rights reserved.</p> <!-- Copyright notice -->
+    </footer>
+
+</body> <!-- End of body -->
+
+</html> <!-- End of HTML document -->

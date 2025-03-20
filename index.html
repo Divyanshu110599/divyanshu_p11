@@ -1,232 +1,610 @@
-<!-- This is an HTML document for a portfolio website -->
-
 <!DOCTYPE html>
 <html>
 
 <head>
-    <!-- Meta tags and stylesheets -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <title>Portfolio</title>
-    <!-- Internal styles -->
-    <style>
+  <!-- Page Title -->
+  <title>Divyanshu Portfolio</title>
+  <!-- Favicon Icon -->
+  <link rel="icon" href="./Newindexassets/newindeximage/logo.jpg" />
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./Newindexassets/newindexcss/bootstrap.min.css" />
+  <link rel="stylesheet" href="./Newindexassets/newindexcss/fontawesome.css" />
+  <link rel="stylesheet" href="./Newindexassets/newindexcss/slick.css" />
+  <link rel="stylesheet" href="./Newindexassets/newindexcss/lightgallery.min.css" />
+  <link rel="stylesheet" href="./Newindexassets/newindexcss/animate.css" />
+  <link rel="stylesheet" href="./Newindexassets/newindexcss/style.css" />
 
-        
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            max-height: 100vh;
-            background-color: #050505;
-        }
-
-       
-        
-        header {
-            padding: 1.7rem 1rem;
-            background-color: #fff;
-            display: flex;
-            justify-content: space-between;
-            max-width: 80%;
-            margin: auto;
-            align-items: center;
-            background-color: transparent;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: .97rem;
-            font-weight: 600;
-            letter-spacing: .7px;
-            padding: 1rem;
-            padding: 0.4rem 1rem;
-        }
-
-        nav a.active,
-        nav a:hover {
-            color: #00E8F8;
-            border-radius: 1rem;
-            transition: all.3s ease-in-out;
-        }
-
-        #click {
-            display: none;
-        }
-
-        .menu i {
-            color: #00E8F8;
-        }
-
-        .menu {
-            display: none;
-        }
-
-        section {
-            margin: 2rem 8.5rem;
-        }
-
-        .main {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            margin: 5rem auto;
-        }
-
-        .main h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            color: #fff;
-        }
-
-        .main p {
-            margin-top: 1rem;
-            font-size: .98rem;
-            color: #fff;
-        }
-
-        .social {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.4rem;
-            margin-top: 1.7rem;
-        }
-
-        .social a {
-            color: #00E8F8;
-            font-size: 1rem;
-            border: 1.6px solid #00E8F8;
-            border-radius: 50%;
-            padding: .35rem;
-            text-align: center;
-            width: 50px;
-            height: 30px;
-        }
-
-        .social a:hover {
-            color: #1F252E;
-            background-color: #00E8F8;
-            box-shadow: 0 0 20px #00E8F8;
-            transition: all .3s ease-in-out;
-        }
-
-        .main h1 span:nth-child(1) {
-            font-size: 1.5rem;
-        }
-
-        .main h1 span:nth-child(2) {
-            color: #00E8F8;
-        }
-
-        .images {
-            background-image: url();
-            background-repeat: no-repeat;
-            background-position: 0 -75px;
-            -webkit-box-shadow: 0 10px 10px -10px #000000;
-            -moz-box-shadow: 0 10px 10px -10px #000000;
-            box-shadow: 0px 16px 4px -10px #00E8F8;
-            width: 528px;
-            background-size: cover;
-
-        }
-
-        @keyframes check {
-            0% {
-                transform: translateY(-100px);
-                opacity: 0;
-            }
-
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @media only screen and (max-width:480px) {
-            .menu {
-                display: block;
-                font-size: 1.5rem;
-                font-weight: bold;
-                color: #244D61;
-            }
-
-            header {
-                padding: 0.7rem 1rem;
-                align-items: center;
-                max-width: 100%;
-            }
-
-            nav {
-                position: absolute;
-                display: grid;
-                top: 75px;
-                text-align: center;
-                background-color: #1F252E;
-                left: -100%;
-                z-index: 1;
-                width: 100%;
-            }
-
-            #click:checked~nav {
-                left: 0%;
-                transition: all 0.3s ease;
-            }
-
-            section {
-                margin: 1rem 1.5rem;
-            }
-
-        }
-    </style>
+  <!-- box icon link -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
-<body>
-    <!-- Body of the HTML document -->
-    <header>
-        <!-- Header section with navigation -->
-        <input type="checkbox" id="click">
-        <label for="click" class="mainicon">
-            <div class="menu">
-                <i class="bi bi-list"></i>
-            </div>
-        </label>
-        <nav>
-            <!-- Navigation links -->
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="project.html">Project</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+<body id="home">
+  <!-- Start Header Section -->
+  <header class="st-site-header st-style1 st-sticky-header">
+    <div class="st-main-header">
+      <div class="container">
+        <div class="st-main-header-in">
+          <div class="st-main-header-left">
+            <!-- <a class='st-site-branding' href='/'><img src="" alt="Divyanshu"></a> -->
+          </div>
+          <div class="st-main-header-right">
+            <div class="st-nav">
+              <ul class="st-nav-list st-onepage-nav">
+                <li><a href="#home" class="st-smooth-move">Home</a></li>
+                <li><a href="#about" class="st-smooth-move">About</a></li>
+                <li><a href="#resume" class="st-smooth-move">Resume</a></li>
+                <li><a href="#project" class="st-smooth-move">Project</a></li>
+                <li><a href="#contact" class="st-smooth-move">Contact</a></li>
+              </ul>
+              <div class="sp-phone">
+                <svg viewBox="0 0 513.64 513.64">
+                  <g>
+                    <g>
+                      <path
+                        d="M499.66,376.96l-71.68-71.68c-25.6-25.6-69.12-15.359-79.36,17.92c-7.68,23.041-33.28,35.841-56.32,30.72c-51.2-12.8-120.32-79.36-133.12-133.12c-7.68-23.041,7.68-48.641,30.72-56.32c33.28-10.24,43.52-53.76,17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12,0l-48.64,48.64c-48.64,51.2,5.12,186.88,125.44,307.2c120.32,120.32,256,176.641,307.2,125.44l48.64-48.64C517.581,425.6,517.581,394.88,499.66,376.96z" />
+                    </g>
+                  </g>
+                </svg>
+                <a href="tel:+19712341508" class="sp-phone-no">+91 8208830672</a>
 
-    <section>
-        <!-- Main section of the webpage -->
-        <div class="main">
-            <div class="detail">
-                <h1><span>Hi,</span> <br> I'm <span style="color:#00E8F8;">Divyanshu</span></h1>
-                <p>I'm a Web Developer. <br>Our Main Goal to help & Satisficed the Local & Global Clients <br> by web
-                    development solutions</p>
-                <div class="social">
-                    <!-- Social media links -->
-                    <a href="https://github.com/"><i class="bi bi-github"></i></a>
-                    <a href="https://join.skype.com/invite/tnbPlqreCs9w"><i class="bi bi-skype"></i></a>
-                    <a href="https://www.linkedin.com/in/divyanshu-thakare-2b8187228"><i class="bi bi-linkedin"></i></a>
-                  
-                </div>
+              </div>
             </div>
-            <div class="images">
-                <!-- Placeholder for an image -->
-                <img src="" alt="" width="80%" height="500px">
-            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </header>
+  <!-- End Header Section -->
 
+  <!-- Start Hero Seciton -->
+  <div class="st-height-b80 st-height-lg-b80"></div>
+  <section class="st-hero-wrap st-parallax">
+    <div class="st-hero st-style1 st-ripple-version">
+      <div class="container">
+        <div class="st-hero-text">
+          <h3>Hello, I’m</h3>
+          <h1>Divyanshu <br> Thakare
+          </h1>
+          <h2>Full Stack Developer</h2>
+          <div class="st-hero-btn">
+            <a href="#contact" class="st-btn st-style1 st-color1 st-smooth-move">Hire me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Image - Social Link Group -->
+    <div class="st-hero-img st-to-right">
+      <img class="wow fadeInRight" src="./Newindexassets/newindeximage/one.jpeg" alt="Hero">
+      <div class="st-social-group wow fadeInLeft">
+        <div class="st-social-link">
+          <a href="#" class="st-social-btn active">
+            <span class="st-social-icon"><i class='bx bxl-skype'></i></span>
+            <span class="st-icon-name">Skype</span>
+          </a>
+          <a href="https://www.linkedin.com/login" class="st-social-btn">
+            <span class="st-social-icon"><i class='bx bxl-linkedin'></i></span>
+            <span class="st-icon-name">linkedin</span>
+          </a>
+          <a href="#" class="st-social-btn">
+            <span class="st-social-icon"><i class='bx bxl-github'></i></span>
+            <span class="st-icon-name">Github</span>
+          </a>
+
+        </div>
+      </div>
+    </div>
+    <div id="particles-js"></div>
+  </section>
+  <!-- End Hero Seciton -->
+
+  <!-- Start About Seciton -->
+  <section id="about" class="st-about-wrap">
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">ABOUT ME</h4>
+        <h2 class="st-section-heading-subtitle">ABOUT ME</h2>
+      </div>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 wow fadeInLeft">
+          <div class="st-about-img-wrap">
+            <div class="st-about-img st-dynamic-bg st-bg" data-src="Newindexassets/newindeximage/two.png">
+            </div>
+          </div>
+          <div class="st-height-b0 st-height-lg-b30"></div>
+        </div>
+        <div class="col-lg-6">
+          <div class="st-vertical-middle">
+            <div class="st-vertical-middle-in">
+              <div class="st-text-block st-style1">
+                <h2 class="st-text-block-title">Hi There! I'm Divyanshu</h2>
+                <h4 class="st-text-block-subtitle">Full Stack Developer</h4>
+                <div class="st-text-block-text">
+                  <p>I am a Full-Stack Developer focused on building dynamic and user-friendly web applications. I work
+                    with both front-end and back-end technologies to develop seamless digital experiences. My goal is to
+                    deliver efficient, responsive, and high-performing solutions.</p>
+                </div>
+                <ul class="st-text-block-details st-mp0">
+                  <li><span>Birthday</span> : <span>May 11, 1999</span></li>
+                  <li><span>Phone</span> : <a href="tel:+91 8208830672">+91 8208830672</a></li>
+                  <li><span>Email</span> : <a href="mailto:thakaredeva0@gmail.com">thakaredeva0@gmail.com</a></li>
+                  <li><span>From</span> : <a href="https://maps.app.goo.gl/RAXgYzu9r7uGAcdM6" target="_blank">Katol,
+                      District Nagpur, Maharashtra, India-441302</a></li>
+
+                  <li><span>Language</span> : <span>Marathi, Hindi, English</span></li>
+
+                </ul>
+                <div class="st-text-block-btn">
+                  <a href="#" class="st-btn st-style1 st-color1">Download Resume</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End About Seciton -->
+
+  <!-- Start Service Seciton -->
+
+
+  <!-- Start Skill Seciton -->
+  <section class="st-dark-bg">
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">MY SKILLS</h4>
+        <h2 class="st-section-heading-subtitle">MY SKILLS</h2>
+      </div>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="st-skill-wrap">
+            <div class="st-skill-heading">
+              <h2 class="st-skill-title">I have all the necessary skills for this field of work.</h2>
+              <div class="st-skill-subtitle">I am a Full-Stack Developer skilled in front-end and back-end
+                technologies, specializing in creating responsive and efficient web applications. My expertise includes
+                HTML, CSS, JavaScript, and React.js for building interactive user interfaces, along with PostgreSQL for
+                database management. Additionally, my experience in manual testing ensures quality and reliability in
+                software development.
+              </div>
+            </div><!-- .st-skill-heading -->
+          </div>
+        </div>
+
+        <!-- Progressbar -->
+
+        <div class="col-lg-6">
+          <div class="st-height-b0 st-height-lg-b30"></div>
+          <div class="st-progressbar-wrap">
+            <div class="st-single-progressbar">
+              <div class="st-progressbar-heading">
+                <h3 class="st-progressbar-title">HTML CSS</h3>
+                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">95%
+                </div>
+              </div>
+              <div class="st-progressbar" data-progress="95">
+                <div class="st-progressbar-in wow fadeInLeft"></div>
+              </div>
+            </div><!-- .st-single-progressbar -->
+            <div class="st-height-b30 st-height-lg-b20"></div>
+            <div class="st-single-progressbar">
+              <div class="st-progressbar-heading">
+                <h3 class="st-progressbar-title">JavaScript</h3>
+                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">75%
+                </div>
+              </div>
+              <div class="st-progressbar" data-progress="80">
+                <div class="st-progressbar-in wow fadeInLeft"></div>
+              </div>
+            </div><!-- .st-single-progressbar -->
+            <div class="st-height-b30 st-height-lg-b20"></div>
+            <div class="st-single-progressbar">
+              <div class="st-progressbar-heading">
+                <h3 class="st-progressbar-title">React.js</h3>
+                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">75%
+                </div>
+              </div>
+              <div class="st-progressbar" data-progress="90">
+                <div class="st-progressbar-in wow fadeInLeft"></div>
+              </div>
+            </div><!-- .st-single-progressbar -->
+            <div class="st-height-b30 st-height-lg-b20"></div>
+            <div class="st-single-progressbar">
+              <div class="st-progressbar-heading">
+                <h3 class="st-progressbar-title">PostgreSQL</h3>
+                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">85%
+                </div>
+              </div>
+              <div class="st-progressbar" data-progress="85">
+                <div class="st-progressbar-in wow fadeInLeft"></div>
+              </div>
+            </div><!-- .st-single-progressbar -->
+            <div class="st-height-b30 st-height-lg-b20"></div>
+            <div class="st-single-progressbar">
+              <div class="st-progressbar-heading">
+                <h3 class="st-progressbar-title">Manual Testing</h3>
+                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">70%
+                </div>
+              </div>
+              <div class="st-progressbar" data-progress="80">
+                <div class="st-progressbar-in wow fadeInLeft"></div>
+              </div>
+            </div><!-- .st-single-progressbar -->
+            <!-- <div class="st-height-b30 st-height-lg-b20"></div>
+            <div class="st-single-progressbar">
+              <div class="st-progressbar-heading">
+                <h3 class="st-progressbar-title">Digital Marketing</h3>
+                <div class="st-progressbar-percentage wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.5s">90%
+                </div>
+              </div>
+              <div class="st-progressbar" data-progress="90">
+                <div class="st-progressbar-in wow fadeInLeft"></div>
+              </div>
+            </div>.st-single-progressbar -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Skill Seciton -->
+
+  <!-- Start Resume Seciton -->
+  <section id="resume" class="st-dark-bg">
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">RESUME</h4>
+        <h2 class="st-section-heading-subtitle">RESUME</h2>
+      </div>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <!-- Experience -->
+        <div class="col-lg-6">
+          <div class="st-resume-wrap">
+            <div class="st-resume-heading">
+              <img src="./Newindexassets/newindeximage/resume-icon1.png" alt="resume-icon">
+              <h2 class="st-resume-heading-title">Experience</h2>
+            </div>
+
+            <div class="st-height-b50 st-height-lg-b30"></div>
+
+            <div class="st-resume-timeline-wrap">
+              <div class="st-resume-timeline">
+                <h3 class="st-resume-timeline-title">Full Stack Developer Internship</h3>
+                <div class="st-resume-timeline-duration">April 2024 - Present</div>
+                <h4 class="st-resume-timeline-subtitle">At Enjoy Programming pvt ltd</h4>
+                <div class="st-resume-timeline-text">
+                  <p>
+
+                  </p>
+                </div>
+              </div> <!-- st-resume-timeline -->
+              <div class="st-height-b50 st-height-lg-b30"></div>
+              <div class="st-resume-timeline">
+                <h3 class="st-resume-timeline-title">Process Associate</h3>
+                <div class="st-resume-timeline-duration">May 2023 - Aug 2023</div>
+                <h4 class="st-resume-timeline-subtitle">At Dhandhania Infotech pvt ltd</h4>
+                <div class="st-resume-timeline-text">
+                  <p>
+
+
+                  </p>
+                </div>
+              </div> <!-- st-resume-timeline -->
+              <!-- <div class="st-height-b50 st-height-lg-b30"></div>
+              <div class="st-resume-timeline">
+                <h3 class="st-resume-timeline-title">UI/UX Designer</h3>
+                <div class="st-resume-timeline-duration">Jan 2014 - December 2015</div>
+                <h4 class="st-resume-timeline-subtitle">Strosin, Maggio and Homenick</h4>
+                <div class="st-resume-timeline-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                    ligula nulla, tincidunt id faucibus sed, suscipit feugiat turpis.</p>
+                </div>
+              </div> st-resume-timeline -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="col-lg-6">
+
+          <div class="st-height-b0 st-height-lg-b50"></div>
+          <div class="st-resume-wrap">
+            <div class="st-resume-heading">
+              <img src="./Newindexassets/newindeximage/resume-icon2.png" alt="resume-icon">
+              <h2 class="st-resume-heading-title">Education</h2>
+            </div>
+            <div class="st-height-b50 st-height-lg-b30"></div>
+
+            <div class="st-resume-timeline-wrap">
+              <div class="st-resume-timeline">
+                <h3 class="st-resume-timeline-title">Bachelor of Electrical Engineering</h3>
+                <div class="st-resume-timeline-duration">2018 - 2022</div>
+                <h4 class="st-resume-timeline-subtitle">University of SPPU</h4>
+
+              </div> <!-- st-resume-timeline -->
+              <div class="st-height-b50 st-height-lg-b30"></div>
+              <div class="st-resume-timeline">
+                <h3 class="st-resume-timeline-title">Diploma in Electrical</h3>
+                <div class="st-resume-timeline-duration">2015 - 2018</div>
+                <h4 class="st-resume-timeline-subtitle">University of RTMNU</h4>
+                <div class="st-resume-timeline-text">
+
+                </div>
+              </div>
+              <!-- -- st-resume-timeline -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="st-height-b100 st-height-lg-b80"></div>
+  </section>
+  <!-- End Resume Seciton -->
+
+  <!-- Start Portfolio Seciton -->
+  <section id="project">
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">Project</h4>
+        <h2 class="st-section-heading-subtitle">PORTFOLIOS</h2>
+      </div>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="./project_html.html" class="st-portfolio st-zoom">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="https://cdn.pixabay.com/photo/2018/05/08/21/28/html5-3384014_1280.png" alt="portfolio">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  
+                  <h5>HTML Project</h5>
+
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="./project_js.html" class="st-portfolio st-zoom ">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_1280.png" alt="portfolio">
+                </div>
+                <div class="st-portfolio-item-hover">
+
+                  <h5>JavaScript Project</h5>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="./bootstrap_js.html" class="st-portfolio st-zoom">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="https://images.tpointtech.com/bootstrappages/images/bootstrap-tutorial.png" alt="portfolio">
+                </div>
+                <div class="st-portfolio-item-hover">
+                
+                  <h5>Bootstrap Project </h5>
+
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="assets/img/portfolio/portfolio4_lg.jpg" class="st-portfolio st-zoom">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="https://cdn.worldvectorlogo.com/logos/react-1.svg" alt="portfolio">
+                </div>
+                <div class="st-portfolio-item-hover">
+                
+                  <h5>React Project</h5>
+
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="./manual.html" class="st-portfolio st-zoom">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwJQc3m6Kqq04EBX6CcmmbCPAYkzn_0Rh7WA&s"
+                    alt="portfolio">
+                </div>
+                <div class="st-portfolio-item-hover">
+                
+                  <h5>Test Cases</h5>
+
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="assets/img/portfolio/portfolio6_lg.jpg" class="st-portfolio st-zoom">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="https://avatars1.githubusercontent.com/u/9919?v=4" alt="portfolio">
+                </div>
+                <div class="st-portfolio-item-hover">
+               
+                  <h5>Github Link</h5>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery">
+            <div class="st-portfolio-item">
+              <a href="./Newindexassets/newindeximage/EP2024017.JPEG" class="st-portfolio st-zoom ">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="https://media.istockphoto.com/id/1394400547/vector/graduation-hat-and-diploma-cartoon.jpg?s=612x612&w=0&k=20&c=RupozAX7BDkhgDblp0WNbWqC2-sjxxXJMAsAWCSuiRo=" alt="portfolio">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-plus-circle"></i>
+                  <h5>Certificate</h5>
+
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="st-height-b100 st-height-lg-b80"></div>
+  </section>
+  <!-- End Portfolio Seciton -->
+
+
+
+
+
+  <!-- Start Contact Seciton -->
+  <section id="contact" class="st-dark-bg">
+    <div class="st-height-b100 st-height-lg-b80"></div>
+    <div class="container">
+      <div class="st-section-heading st-style1">
+        <h4 class="st-section-heading-title">CONTACT ME</h4>
+        <h2 class="st-section-heading-subtitle">CONTACT ME</h2>
+      </div>
+      <div class="st-height-b25 st-height-lg-b25"></div>
+    </div>
+
+    <!-- Contact Container -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h3 class="st-contact-title"></h3>
+          <div id="st-alert"></div>
+
+
+          <form action="#" method="POST" class="st-contact-form" id="contact-form">
+            <div class="st-form-field">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="st-form-field">
+              <input type="text" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="st-form-field">
+              <input type="text" id="subject" name="subject" placeholder="Your Subject" required>
+            </div>
+            <div class="st-form-field">
+              <textarea cols="30" rows="10" id="msg" name="msg" placeholder="Your Message" required></textarea>
+            </div>
+            <button class="st-btn st-style1 st-color1" type="submit" id="submit" name="submit">Send message</button>
+          </form>
+        </div>
+        <div class="st-height-b0 st-height-lg-b30"></div>
+
+        <div class="col-lg-6">
+          <div class="st-height-b0 st-height-lg-b40"></div>
+          <h3 class="st-contact-title">Contact Info</h3>
+          <div class="st-contact-text">
+
+          </div>
+          <div class="st-contact-info-wrap">
+            <div class="st-single-contact-info">
+              <i class='bx bxs-envelope'></i>
+              <div class="st-single-info-details">
+                <h4>Email</h4>
+                <a href="mailto:thakaredeva0@gmail.com">thakaredeva0@gmail.com</a>
+
+              </div>
+            </div>
+            <div class="st-single-contact-info">
+              <i class='bx bxs-mobile' ></i>
+              <div class="st-single-info-details">
+                <h4>Phone</h4>
+                <span></span>
+                <a href="tel:+91 8208830672">+91 8208830672</a>
+              </div>
+            </div>
+            <div class="st-single-contact-info">
+              <i class='bx bx-location-plus'></i>
+              <div class="st-single-info-details">
+                <h4>Address</h4>
+                <span><a href="https://maps.app.goo.gl/RAXgYzu9r7uGAcdM6" target="_blank">Katol,
+                    District Nagpur, Maharashtra, India-441302</a></span>
+              </div>
+            </div>
+            <div class="st-social-info">
+              <div class="st-contact-title">
+                <h3 style="color: aqua;">Catch up with me on social platforms! </h3>
+              </div>
+              <div class="st-social-link">
+                <a href="#" class="st-social-btn active">
+                  <span class="st-social-icon"><i class='bx bxl-skype'></i></span>
+                  <span class="st-icon-name">Skype</span>
+                </a>
+                <a href="https://www.linkedin.com/login" class="st-social-btn">
+                  <span class="st-social-icon"><i class='bx bxl-linkedin'></i></span>
+                  <span class="st-icon-name">linkedin</span>
+                </a>
+                <a href="#" class="st-social-btn">
+                  <span class="st-social-icon"><i class='bx bxl-github'></i></span>
+                  <span class="st-icon-name">Github</span>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="st-height-b100 st-height-lg-b80"></div>
+  </section>
+  <!-- End Contact Seciton -->
+
+  <!-- Start Footer Seciton -->
+  <footer>
+    <div class="container">
+      <div class="st-copyright-wrap text-center">
+        <div class="st-copyright-text">Powered By Enjoy Programming</div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer Seciton -->
+
+  <!-- Scripts -->
+  <script src="./Newindexassets/newindexjs/jquery-1.12.4.min.js"></script>
+  <script src="./Newindexassets/newindexjs/jquery.slick.min.js"></script>
+  <script src="./Newindexassets/newindexjs/lightgallery.min.js"></script>
+  <script src="./Newindexassets/newindexjs/wow.min.js"></script>
+  <script src="./Newindexassets/newindexjs/ripples.min.js"></script>
+  <script src="./Newindexassets/newindexjs/particles.min.js"></script>
+  <script src="./Newindexassets/newindexjs/main.js"></script>
+  <script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

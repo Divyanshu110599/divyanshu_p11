@@ -1,109 +1,151 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-
+   
     <title>Charges Information</title>
-
     <style>
+        /* Reset some default styles */
+        body,
+        h3,
         table {
-            height: 30%;
-            width: 50%;
-            border-collapse: collapse black;
-            margin-top: 5%;
-            background-color: rgba(255, 254, 254, 0.7);
-            margin-left: 300px;
-            border-collapse: collapse;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
         }
 
-        td {
-            border-style: solid;
-            border-width: 2px;
-            font-size: large;
-        }
-
-        th {
-            border-style: solid;
-            border-width: 2px;
-            font-size: larger;
-        }
-
-        .table-caption {
-            margin-left: -60%;
-        }
-
-        .row-one {
-            color: rgb(4, 73, 4);
-            border-color: rgb(248, 244, 244);
-        }
-
-        .row-two {
-            color: rgb(18, 17, 17);
-        }
-
-        .row-three {
-            color: rgb(12, 12, 12)
-        }
-
-        .row-four {
-            color: rgb(247, 40, 40);
-        }
-
-        .background {
+        /* Background image styling */
+        body {
             background-image: url(./assets/pexels-pixabay-459728.jpg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Back button styling */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background: #dc3545;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+
+
+        /* Table styling */
+        table {
+            width: 90%;
+            max-width: 800px;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: rgba(255, 254, 254, 0.9);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+            font-size: larger;
+        }
+
+        /* Row styles */
+        .row-one {
+            color: green;
+        }
+
+        .row-two {
+            color: black;
+        }
+
+        .row-three {
+            color: darkgray;
+        }
+
+        .row-four {
+            color: red;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            table {
+                width: 100%;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                font-size: small;
+            }
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 768px) {
+            .back-button {
+                font-size: 16px;
+                padding: 5px 9px;
+            }
         }
     </style>
 </head>
 
-<body class="background">
+<body>
+    <!-- Back Button (Positioned at the Top-Left) -->
+    <a href="electricbill.html" class="back-button">&#8592; Back</a>
 
+    <h1>Charges Information</h1>
     <table>
-        <caption class="table-caption">
-            <h3>Charges Information:</h3>
-        </caption>
-
-        <tbody>
-            <tr>
-                <th>Range (in units)</th>
-                <th>Rate per unit</th>
-                <th>Surplus Usage Charges(In percentage)</th>
-                <th>Late Fees(In Rs)</th>
-            </tr>
-
-            <tr class="row-one">
-                <td>0-50</td>
-                <td>1.5rs</td>
-                <td>No Surplus Charge</td>
-                <td>More than 10 days=20rs</td>
-            </tr>
-            <tr class="row-two">
-                <td>51-150</td>
-                <td>2.5rs</td>
-                <td>5%</td>
-                <td>More than 15 days=40rs</td>
-            </tr>
-            <tr class="row-three">
-                <td>151-250</td>
-                <td>3.5rs</td>
-                <td>10%</td>
-                <td>More than 25 days=100rs</td>
-            </tr>
-            <tr class="row-four">
-                <td>251 and above</td>
-                <td>5rs</td>
-                <td>20%</td>
-                <td>More than 180 days= Fine of 20000rs <br> and Supply CUT</td>
-            </tr>
-        </tbody>
+        <tr>
+            <th>Range (in units)</th>
+            <th>Rate per unit</th>
+            <th>Surplus Usage Charges (In percentage)</th>
+            <th>Late Fees (In Rs)</th>
+        </tr>
+        <tr class="row-one">
+            <td>0-50</td>
+            <td>1.5rs</td>
+            <td>No Surplus Charge</td>
+            <td>More than 10 days = 20rs</td>
+        </tr>
+        <tr class="row-two">
+            <td>51-150</td>
+            <td>2.5rs</td>
+            <td>5%</td>
+            <td>More than 15 days = 40rs</td>
+        </tr>
+        <tr class="row-three">
+            <td>151-250</td>
+            <td>3.5rs</td>
+            <td>10%</td>
+            <td>More than 25 days = 100rs</td>
+        </tr>
+        <tr class="row-four">
+            <td>251 and above</td>
+            <td>5rs</td>
+            <td>20%</td>
+            <td>More than 180 days = Fine of 20000rs <br> and Supply CUT</td>
+        </tr>
     </table>
-
-    </div>
-    </div>
-    </div>
-    </div>
 </body>
-`
+
 </html>

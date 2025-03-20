@@ -2,15 +2,12 @@
 <html>
 
 <head>
-    <!-- page Title -->
-
+    <!-- Page Title -->
     <title>Vowel or Consonant Checker</title>
 
-    <!-- Link css file -->
-
+    <!-- CSS Styles -->
     <style>
-       
-
+        /* Styles for the container */
         .container {
             width: 400px;
             height: 400px;
@@ -20,98 +17,160 @@
             border-style: solid;
             margin-top: 10%;
             margin-left: 35%;
+            background-color: black;
         }
 
-       
-
+        /* Base body styles */
         body {
             font-family: Arial, sans-serif;
+            /* Font family for the entire page */
+        }
+
+        /* Back button styling */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background: #dc3545;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
         }
 
 
+        /* Styling for the result text */
         #result {
             font-weight: bold;
+            color: rgb(47, 203, 89);
+            font-size: 25px;
         }
 
-       
-
+        /* Input field styles */
         input {
             padding: 10px;
             margin-bottom: 20px;
             width: 200px;
         }
 
-
-       
+        /* Button styles */
         button {
             padding: 10px 20px;
             background-color: #007bff;
+            /* Blue background color */
             color: #fff;
+            /* White text color */
             border: none;
         }
 
-     
-
+        /* Hover state for button */
         button:hover {
             background-color: #037003;
-
+            /* Dark green background color on hover */
         }
 
-      
 
-        .background {
-            background-image: url(./assets/pexels-pixabay-278887.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100%;
-            width: 100%;
-        }
 
-       
-
+        /* Paragraph styles for messages */
         p {
             font-size: 20px;
             font-weight: bold;
             color: #f6f6f8;
+            /* Light gray text color */
+        }
+
+
+        /* Background image styles */
+        .background {
+            background-image: url(./assets/pexels-pixabay-278887.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .background {
+                background-size: contain;
+                background-position: top;
+            }
+
+            .container {
+                width: 90%;
+                margin-left: 5%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .background {
+                background-size: cover;
+                background-position: center;
+            }
+
+            .container {
+                width: 80%;
+                margin-left: 10%;
+                padding-top: 30px;
+            }
+
+            input {
+                width: 150px;
+            }
+        }
+
+
+        /* Responsive styles */
+        @media only screen and (max-width: 768px) {
+            .back-button {
+                font-size: 16px;
+                padding: 5px 9px;
+            }
         }
     </style>
 
 </head>
-<!-- Background image Style -->
+
+<!-- Body with background image style -->
 
 <body class="background">
 
-    <!-- container -->
+    <!-- Back Button (Positioned at the Top-Left) -->
+    <a href="project_js.html" class="back-button">&#8592; Back</a>
 
+    <!-- Container for the content -->
     <div class="container">
 
-        <h1 style="color: rgb(8, 8, 8);">Vowel or Consonant Checker :-</h1>
+        <h1 style="color: rgb(245, 243, 243);">Vowel or Consonant Checker :-</h1> <!-- Heading for the page -->
 
-        <input type="text" id="characterInput" placeholder="Enter a character">
+        <input type="text" id="characterInput" placeholder="Enter a character"> <!-- Input field for character entry -->
 
-        <!-- On Click Function -->
-
+        <!-- Button to trigger the check function -->
         <button onclick="check()">Check</button>
 
-
+        <!-- Paragraph to display the result -->
         <p id="result"></p>
     </div>
 
-    <!-- Link JavaScript File -->
-
+    <!-- JavaScript to handle character checking -->
     <script>
         function check() {
-            var character = document.getElementById("characterInput").value.toLowerCase();
-            var vowels = ['a', 'e', 'i', 'o', 'u'];
+            var character = document.getElementById("characterInput").value.toLowerCase(); // Get input and convert to lowercase
+            var vowels = ['a', 'e', 'i', 'o', 'u']; // Array of vowels
 
+            // Check conditions and display appropriate message
             if (character.length !== 1) {
-                document.getElementById("result").innerText = "Please enter only one character.";
+                document.getElementById("result").innerText = "Please enter only one character."; // If more than one character
             } else if (!isNaN(character)) {
-                document.getElementById("result").innerText = "Please enter a valid character (a-z).";
+                document.getElementById("result").innerText = "Please enter a valid character (a-z)."; // If input is numeric
             } else if (vowels.indexOf(character) !== -1) {
-                document.getElementById("result").innerText = "The character '" + character + "' is a vowel.";
+                document.getElementById("result").innerText = "The character '" + character + "' is a vowel."; // If character is a vowel
             } else {
-                document.getElementById("result").innerText = "The character '" + character + "' is a consonant.";
+                document.getElementById("result").innerText = "The character '" + character + "' is a consonant."; // If character is a consonant
             }
         }
     </script>

@@ -3,12 +3,12 @@
 <html lang="en">
 
 <head>
-
+   
     <title>Contact Me</title>
-
+    
     <!-- FontAwesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-
+    
     <style>
         /* Defining CSS variables for consistent theming */
         :root {
@@ -16,7 +16,7 @@
             --secondary-color: #666;
             --button-color: #3B3636;
             --h1-color: #26355D;
-            background: linear-gradient(#7F8C8D, #000000);
+            background: linear-gradient(#7F8C8D,#000000);
         }
 
         /* Resetting default margins and paddings */
@@ -164,27 +164,11 @@
             background: #555;
         }
 
-        /* Back button styling */
-        .back-button {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            padding: 10px 15px;
-            background: #dc3545;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
         /* Responsive styles for smaller screens */
         @media (max-width: 900px) {
             .contact-container {
                 flex-direction: column;
             }
-
             .left-col {
                 height: 300px;
             }
@@ -194,51 +178,36 @@
             .right-col {
                 padding: 20px;
             }
-
             h1 {
                 font-size: 1.5rem;
             }
-
             input,
             textarea {
                 font-size: 0.9rem;
                 padding: 10px;
             }
-
             button {
                 font-size: 0.9rem;
                 padding: 10px;
-            }
-        }
-
-        /* Responsive styles */
-        @media only screen and (max-width: 768px) {
-            .back-button {
-                font-size: 16px;
-                padding: 5px 9px;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- Back Button (Positioned at the Top-Left) -->
-    <a href="index.html" class="back-button">&#8592; Back</a>
     <div class="contact-container">
         <!-- Left section with social media links -->
         <div class="left-col">
             <div class="deta">
                 <h1>Let's Connect</h1>
                 <ul>
-                    <li class="github"><a href="https://github.com/Divyanshu110599"><i class='fab fa-github'></i></a>
-                    </li>
+                    <li class="github"><a href="https://github.com/Divyanshu110599"><i class='fab fa-github'></i></a></li>
                     <li class="skype"><a href="live:.cid.7cb5a785c0fea592"><i class="fab fa-skype"></i></a></li>
-                    <li class="linkedin"><a href="https://www.linkedin.com/in/divyanshu-thakare-2b8187228"><i
-                                class="fab fa-linkedin"></i></a></li>
+                    <li class="linkedin"><a href="https://www.linkedin.com/in/divyanshu-thakare-2b8187228"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
             </div>
         </div>
-
+        
         <!-- Right section with the contact form -->
         <div class="right-col">
             <h1>Contact ME</h1>
@@ -254,7 +223,7 @@
             </form>
         </div>
     </div>
-
+    
     <!-- JavaScript to handle form submission -->
     <script>
         document.getElementById("contact-form").addEventListener("submit", function (e) {

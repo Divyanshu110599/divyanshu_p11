@@ -1,82 +1,149 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- Document type declaration for HTML5 -->
 <html>
 
 <head>
     <style>
-      
+        /* CSS styles for the document */
+
         body {
             margin: 0;
+            /* Remove default margin */
             padding: 0;
+            /* Remove default padding */
             font-family: Arial, sans-serif;
+            /* Set font family for the body */
         }
 
-      
+        /* Back button styling */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background: #dc3545;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+
         .top {
+            /* Styles for the top section */
             background-image: url(./assets/registrationO.avif);
+            /* Background image */
             background-position: center;
+            /* Center the background image */
             background-repeat: no-repeat;
+            /* Do not repeat the background image */
             background-size: cover;
+            /* Cover the entire background */
             display: flex;
+            /* Flexbox layout */
             justify-content: center;
+            /* Center content horizontally */
             align-items: center;
+            /* Center content vertically */
             height: 100vh;
+            /* Full viewport height */
         }
 
         form {
-           border-style: solid;
-           border-color: white;
+            /* Styles for the form */
+            border-style: solid;
+            /* Solid border */
+            border-color: white;
+            /* White border color */
             padding: 20px;
+            /* Padding inside the form */
             max-width: 500px;
+            /* Maximum width of the form */
             width: 90%;
+            /* 90% width of its container */
             height: auto;
+            /* Auto height */
             margin: 80px auto;
+            /* Margin to center vertically */
         }
 
         fieldset {
             border: none;
+            /* Remove border from fieldset */
         }
 
-        
         input[type="number"],
         input[type="date"],
         input[type="range"],
         textarea {
+            /* Styles for specific input types */
             width: 100%;
+            /* Full width */
             padding: 10px;
+            /* Padding inside */
             margin-bottom: 10px;
+            /* Bottom margin */
             box-sizing: border-box;
+            /* Box-sizing for padding calculation */
         }
 
         input[type="radio"] {
+            /* Styles for radio buttons */
             margin-right: 5px;
+            /* Right margin */
         }
 
-       
         @media only screen and (max-width: 768px) {
+
+            /* Media query for smaller screens */
             form {
                 width: 90%;
+                /* 90% width */
             }
         }
 
         @media only screen and (max-width: 480px) {
+
+            /* Media query for even smaller screens */
             form {
                 width: 90%;
+                /* 90% width */
+            }
+        }
+
+
+        /* Responsive styles */
+        @media only screen and (max-width: 768px) {
+            .back-button {
+                font-size: 16px;
+                padding: 5px 9px;
             }
         }
     </style>
 </head>
 
-<body class="top">
-    <form action="three.html">
+<body class="top"> <!-- Body with top class for styling -->
+
+
+    <!-- Back Button (Positioned at the Top-Left) -->
+    <a href="project_js.html" class="back-button">&#8592; Back</a>
+
+
+    <!-- Form section -->
+    <form action="three.html"> <!-- Form with action attribute pointing to three.html -->
+
         <fieldset>
-            <legend style="color: #0d0d0d;">Enjoy Programming :-</legend>  <br>
+            <legend style="color: #0d0d0d;">Enjoy Programming :-</legend> <!-- Legend for the form -->
+            <br>
             <label for="mobileNumber" style="color: #0c0c0c;">Mobile Number:</label><br>
-            <input type="number" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number"><br><br>
+            <!-- Label and input for mobile number -->
+            <input type="number" id="mobileNumber" name="mobileNumber" placeholder="Mobile Number" required><br><br>
 
-            <label for="dob" style="color: #0d0d0d;">DOB:</label><br>
-            <input type="date" id="dob" name="dob"><br><br>
+            <label for="dob" style="color: #0d0d0d;">DOB:</label><br> <!-- Label and input for date of birth -->
+            <input type="date" id="dob" name="dob" required><br><br>
 
-            <label style="color: #0e0d0d;">Gender:</label><br>
+            <label style="color: #0e0d0d;">Gender:</label><br> <!-- Label and radio buttons for gender -->
             <input type="radio" id="male" name="gender">
             <label for="male" style="color: #FEFBF6;">Male</label>
 
@@ -87,7 +154,8 @@
             <label for="other" style="color: #FEFBF6;">Other</label><br><br>
 
             <label style="color: #090909;">Batch Selection:</label><br>
-            <input type="radio" id="summer" name="batch">
+            <!-- Label and radio buttons for batch selection -->
+            <input type="radio" id="summer" name="batch" required>
             <label for="summer" style="color: #FEFBF6;">Summer</label><br>
 
             <input type="radio" id="winter" name="batch">
@@ -97,13 +165,18 @@
             <label for="rainy" style="color: #FEFBF6;">Rainy Season</label><br><br>
 
             <label style="color: #0b0b0b;">How do you rate your communication skills:</label><br>
+            <!-- Label and range input for communication skills -->
             <input type="range" id="communicationSkills" name="communicationSkills" min="0" max="10" value="5"><br><br>
 
             <textarea name="query" placeholder="Any query" cols="50" rows="5"></textarea><br><br>
+            <!-- Textarea for queries -->
 
             <input type="submit" value="Submit" style="background-color:#EEEDEB; color: #5F0F40; font-size: large;">
+            <!-- Submit button -->
         </fieldset>
+
     </form>
+
 </body>
 
 </html>

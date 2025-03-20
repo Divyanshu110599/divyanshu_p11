@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="./OIG1.jpeg" sizes="100x100"> <!-- Favicon for the webpage -->
-    <title>My Projects</title>
+    <title>My HTML Projects</title>
     <style>
         @keyframes changeColor {
             25% {
@@ -26,9 +26,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            /* background-color: #e4e4e4; */
-            background: linear-gradient(#000428, #004e92);
+            /* background-color: #ed0d0d; */
+            background: linear-gradient(#bdc3c7, #2c3e50);
             transition: background-color 0.3s ease;
+        }
+
+        /* Dark mode styling for the body */
+        body.dark-mode {
+            background-color: #333;
         }
 
         /* Back button styling */
@@ -37,7 +42,7 @@
             top: 20px;
             left: 20px;
             padding: 10px 15px;
-            background: #dc3545;
+            background: #090909;
             color: white;
             text-decoration: none;
             font-size: 18px;
@@ -46,10 +51,6 @@
             transition: 0.3s;
         }
 
-        /* Dark mode styling for the body */
-        body.dark-mode {
-            background-color: #333;
-        }
 
         /* Heading 1 styling */
         h1 {
@@ -246,7 +247,6 @@
         }
 
 
-
         /* Responsive styles */
         @media only screen and (max-width: 768px) {
             .back-button {
@@ -258,51 +258,112 @@
 </head>
 
 <body>
-
     <!-- Back Button (Positioned at the Top-Left) -->
-    <a href="index.html" class="back-button">&#8592; Back</a>
+    <a href="project.html" class="back-button">&#8592; Back</a>
 
     <h1>My Projects</h1> <!-- Main heading for the page -->
-
-
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search projects..." class="search-container">
+        <!-- Search input field -->
+    </div>
+    <div class="theme-switch-wrapper"> <!-- Theme switch wrapper -->
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox"> <!-- Checkbox input for theme switch -->
+            <div class="slider round"></div> <!-- Slider for theme switch -->
+        </label>
+    </div>
     <main>
         <!-- Project cards section -->
-
-        <div class="project">
-            <a href="project_js.html"><img
-                    src="https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_1280.png"
-                    alt="Top 3 freedom fighters of India "></a> <!-- Image link for the project -->
+         <div class="project">
+            <a href="calculator.html"><img
+                    src="https://images.pexels.com/photos/5412432/pexels-photo-5412432.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="calculator"></a> <!-- Image link for the project -->
             <div class="project-description">
-                <p> Project</p> <!-- Project description -->
+                <p>Calculator</p> <!-- Project description -->
             </div>
         </div>
         <div class="project">
-            <a href="bootstrap_js.html"><img
-                    src="https://cdn.iconscout.com/icon/free/png-512/free-bootstrap-logo-icon-download-in-svg-png-gif-file-formats--wordmark-programming-langugae-language-pack-logos-icons-1175203.png?f=webp&w=256"
-                    alt="India Flag"></a> <!-- Image link for the project -->
+            <a href="kbcc.html"><img
+                    src="https://images.news18.com/webstories/2023/09/kbc23_int_14aug_landscape_thumb.jpg"
+                    alt="KBC Project"></a> <!-- Image link for the project -->
             <div class="project-description">
-                <p> Project</p> <!-- Project description -->
-            </div>
-        </div>
-        <div class="project">
-            <a href=""><img
-                    src="https://cdn.iconscout.com/icon/free/png-512/free-react-logo-icon-download-in-svg-png-gif-file-formats--company-brand-world-logos-vol-4-pack-icons-282599.png?f=webp&w=256"
-                    alt="Registration page"></a> <!-- Image link for the project -->
-            <div class="project-description">
-                <p> Project</p> <!-- Project description -->
+                <p>KBC Project</p> <!-- Project description -->
             </div>
         </div>
 
         <div class="project">
-            <a href="manual.html"><img
-                    src="https://cdn.iconscout.com/icon/premium/png-512-thumb/manual-3903548-3253149.png?f=webp&w=256"
-                    alt="Registration page"></a> <!-- Image link for the project -->
-            <div class="project-description">
-                <p> Project</p> <!-- Project description -->
+            <a href="music.html"><img
+                    src="https://images.pexels.com/photos/5083212/pexels-photo-5083212.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="Music Player"></a> <!-- Image link for the project -->
+            <div class="project-description"> <br> <!-- Project description -->
+                <p>Music Player</p>
+            </div>
+        </div>
+        <div class="project">
+            <a href="electricbill.html"><img
+                    src="https://images.pexels.com/photos/414967/pexels-photo-414967.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Electricity Bill"></a> <!-- Image link for the project -->
+            <div class="project-description"> <br> <!-- Project description -->
+                <p>Electricity Bill</p>
+            </div>
+        </div>
+        <div class="project">
+            <a href="vote.html"><img
+                    src="https://images.pexels.com/photos/8850883/pexels-photo-8850883.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="Vote Finder" width="50%"></a> <br> <!-- Image link for the project -->
+            <div class="project-description"> <!-- Project description -->
+                <p>Vote Finder</p>
+            </div>
+        </div>
+        <div class="project">
+            <a href="vowels.html"><img
+                    src="https://images.pexels.com/photos/6005110/pexels-photo-6005110.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Vowel Checker"></a> <!-- Image link for the project -->
+            <div class="project-description"> <br> <!-- Project description -->
+                <p>Vowel Checker</p>
+            </div>
+        </div>
+        <div class="project">
+            <a href="odd.html"><img
+                    src="https://images.pexels.com/photos/1329295/pexels-photo-1329295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    alt="Even Odd Finder"></a> <!-- Image link for the project -->
+            <div class="project-description"> <br> <!-- Project description -->
+                <p>Even Odd Finder</p>
+            </div>
+        </div>
+        <div class="project">
+            <a href="day.html"><img
+                    src="https://images.unsplash.com/photo-1630313347909-7f8460bc9035?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Game Project"></a> <!-- Image link for the project -->
+            <div class="project-description"> <br> <!-- Project description -->
+                <p>Day Finder</p>
+            </div>
+        </div>
+        <div class="project">
+            <a href="largenumber.html"><img
+                    src="https://images.pexels.com/photos/1329292/pexels-photo-1329292.jpeg?auto=compress&cs=tinysrgb&w=600"
+                    alt="Game Project"></a> <!-- Image link for the project -->
+            <div class="project-description"> <!-- Project description -->
+                <p>Large Number Finder</p>
+            </div>
+        </div>
+        <div class="project">
+            <a href="kbc.html"><img
+                    src="https://images.news18.com/webstories/2023/09/kbc23_int_14aug_landscape_thumb.jpg"
+                    alt="Game Project"></a> <!-- Image link for the project -->
+            <div class="project-description"> <!-- Project description -->
+                <p>KBC Game</p>
             </div>
         </div>
 
-
+        <div class="project">
+            <a href="studentdata.html"><img
+                    src="https://img.freepik.com/free-vector/flat-university-concept-background_23-2148189763.jpg?size=626&ext=jpg&ga=GA1.1.1120086336.1718609140&semt=ais_user"
+                    alt="Game Project"></a> <!-- Image link for the project -->
+            <div class="project-description"> <!-- Project description -->
+                <p>Student Search</p>
+            </div>
+        </div>
 
     </main>
 

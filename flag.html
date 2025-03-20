@@ -1,37 +1,128 @@
 <!DOCTYPE html>
-<html>
-<title> flag</title>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag</title>
+    <style>
+        /* Set the background color and remove margins */
+        body {
+            background-color: rgb(193, 234, 234);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+
+         /* Back button styling */
+         .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background: #dc3545;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        /* Flag container with fixed position */
+        .flag-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the flag */
+            border-radius: 5px;
+            border: solid 2px black; /* Border for visibility */
+            width: 600px;
+            max-width: 90%; /* Makes it responsive */
+        }
+
+        /* Saffron color section */
+        .saffron {
+            background-color: #FF671F;
+            height: 100px;
+            width: 100%;
+        }
+
+        /* White color section */
+        .white {
+            background-color: #FFFFFF;
+            height: 100px;
+            width: 100%;
+            position: relative; /* Needed for Ashoka Chakra positioning */
+        }
+
+        /* Ashoka Chakra (center emblem) */
+        .chakra {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the Chakra */
+            height: 80px;
+            width: 80px;
+        }
+
+        /* Green color section */
+        .green {
+            background-color: #046A38;
+            height: 100px;
+            width: 100%;
+        }
+
+        /* Media query for responsiveness on smaller screens */
+        @media (max-width: 768px) {
+            .flag-container {
+                width: 90%;
+            }
+
+            .saffron,
+            .white,
+            .green {
+                height: 80px; /* Reduce height for smaller screens */
+            }
+
+            .chakra {
+                height: 60px;
+                width: 60px; /* Scale down the Chakra */
+            }
+        }
+
+         /* Responsive styles */
+         @media only screen and (max-width: 768px) {
+            .back-button {
+                font-size: 16px;
+                padding: 5px 9px;
+            }
+        }
+    </style>
 </head>
 
-<body style="background-color: rgb(193, 234, 234);">
-    <!-- Main Body -->
-    <div style="display: inline-block; margin: 250px; border-radius: 5px; border-style:solid; margin-left: 359px;">
-        <!-- saffron color -->
-        <div class="st2" style="display: block;
-        background-color: #FF671F;
-        height: 100px;
-        width: 600px;">
-        </div>
-        <!-- white color -->
-        <div class="st3" style="display: block;
-        background-color: #FFFFFF;
-        height: 100px;
-        width: 600px">
-            <div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ruGW0mxpUtIZOLyMaS2dSMztyUgD6E-msaAzwwXFzHjC9_7FqOy2oqsFCl5bnyFHgho&usqp=CAU"
-                    height="100px" width="150px" style="padding-left: 215px;" />
-            </div>
-        </div>
-        <!-- green color -->
-        <div class="st4" style="background-color: #046A38;
-    display: block;
-    height: 100px;
-    width: 600px;">
+<body>
+    
+    <!-- Back Button (Positioned at the Top-Left) -->
+    <a href="project_js.html" class="back-button">&#8592; Back</a>
+    
+    <!-- Main flag container -->
+    <div class="flag-container">
+        <!-- Saffron section -->
+        <div class="saffron"></div>
 
+        <!-- White section with Ashoka Chakra -->
+        <div class="white">
+            <img class="chakra"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ruGW0mxpUtIZOLyMaS2dSMztyUgD6E-msaAzwwXFzHjC9_7FqOy2oqsFCl5bnyFHgho&usqp=CAU"
+                alt="Ashoka Chakra">
         </div>
+
+        <!-- Green section -->
+        <div class="green"></div>
     </div>
 </body>
 
-</html> 
+</html>

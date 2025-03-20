@@ -3,6 +3,7 @@
 
 <head>
     <style>
+        /* Main container styling */
         .main-container {
             height: 100%;
             width: 100%;
@@ -10,8 +11,24 @@
             margin: 10px;
         }
 
-        .start-button {
+        /* Back button styling */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background: #dc3545;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
 
+
+        /* Start button styling */
+        .start-button {
             border-radius: 50px;
             background-color: #32245c;
             font-size: 70px;
@@ -22,6 +39,7 @@
             height: 100px;
         }
 
+        /* Display area styling */
         .display {
             width: 90%;
             height: 250px;
@@ -39,13 +57,14 @@
             text-align: center;
         }
 
+        /* Text display styling */
         .text-display {
             font-size: 80px;
             font-weight: 900;
             color: white;
-
         }
 
+        /* Button styling */
         .button {
             height: 100px;
             width: 500px;
@@ -57,13 +76,85 @@
             font-size: 25px;
             color: white;
             font-weight: bold;
+        }
 
+        /* Media queries for responsiveness */
+        @media screen and (max-width: 1024px) {
+            .start-button {
+                font-size: 50px;
+                width: 600px;
+                height: 80px;
+                margin-left: 150px;
+                margin-top: 200px;
+            }
 
+            .text-display {
+                font-size: 50px;
+            }
 
+            .button {
+                width: 400px;
+                height: 80px;
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .start-button {
+                font-size: 40px;
+                width: 400px;
+                height: 60px;
+                margin-left: 100px;
+                margin-top: 150px;
+            }
+
+            .display {
+                height: 200px;
+                font-size: 20px;
+            }
+
+            .button {
+                width: 300px;
+                height: 60px;
+                font-size: 18px;
+                margin-left: 10%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .start-button {
+                font-size: 30px;
+                width: 300px;
+                height: 50px;
+                margin-left: 50px;
+                margin-top: 100px;
+            }
+
+            .display {
+                height: 150px;
+                font-size: 18px;
+            }
+
+            .button {
+                width: 250px;
+                height: 50px;
+                font-size: 16px;
+                margin-left: 5%;
+            }
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 768px) {
+            .back-button {
+                font-size: 16px;
+                padding: 5px 9px;
+            }
         }
     </style>
+
+
     <script>
-        // function for beginning button 
+        // function for beginning button
         // hide and unhide function
         function letsBegin() {
             document.getElementById("play-button").hidden = true;
@@ -112,7 +203,7 @@
             {
                 question: "08.Which city is known as Pink City in India? ",
                 answers: ["A.Banglore ", "B.Jaipur ", "C.Maysore ", "D.Kochi"],
-               
+
                 correct: 1
             },
             {
@@ -165,24 +256,26 @@
 
 <body
     style="background-image: url(https://images.news18.com/webstories/2023/09/kbc23_int_14aug_landscape_thumb.jpg);  width: 100%; background-repeat: no-repeat; background-size: cover;">
-    <!-- start button -->
+    <!-- Start button -->
+
+    <a href="project_js.html" class="back-button">&#8592; Back</a>
+
     <button class="start-button" id="play-button" onclick="letsBegin()">PLAY NOW</button>
-    <!-- display -->
+
+    <!-- Main game container -->
     <div class="main-container" id="main-body" hidden="true">
         <div class="display" id="container">
             <h4 id="text-display" class="text-display"></h4>
             <br>
-            <div id="loader" class="loader" id="loader" style="display: none;"></div>
+            <div id="loader" class="loader" style="display: none;"></div>
         </div>
-        <!-- buttons -->
+
+        <!-- Answer buttons -->
         <button class="button" id="option-one" onclick="answer(0)"></button>
         <button class="button" id="option-two" onclick="answer(1)"></button>
         <button class="button" id="option-three" onclick="answer(2)"></button>
         <button class="button" id="option-four" onclick="answer(3)"></button>
     </div>
-
 </body>
 
 </html>
-
-https://images.news18.com

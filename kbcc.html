@@ -3,7 +3,6 @@
 
 <head>
     <style>
-        
         .main-container {
             height: 100%;
             width: 100%;
@@ -11,27 +10,44 @@
             margin: 10px;
         }
 
-        
+        /* Back button styling */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background: #dc3545;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+
+        /* Styling for the start button */
         .start-button {
             border-radius: 50px;
             background-color: #32245c;
-            font-size: 70px;
-            color: rgb(8, 7, 7);
-            margin-left: 300.10px;
-            
-            margin-top: 350px;
-            width: 900px;
-            height: 100px;
+            font-size: 50px;
+            color: white;
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 400px;
+            height: 80px;
+            text-align: center;
         }
 
-        
+        /* Question display */
         .display {
             width: 90%;
-            height: 250px;
+            max-width: 800px;
+            height: 200px;
             background-color: #32245c;
-            margin-left: 5%;
+            margin: 50px auto;
             border-radius: 50px;
-            margin-top: 100px;
             border-style: solid;
             display: flex;
             justify-content: center;
@@ -42,26 +58,105 @@
             text-align: center;
         }
 
-
+        /* Question text */
         .text-display {
-            font-size: 80px;
+            font-size: 50px;
             font-weight: 900;
             color: white;
         }
 
-        
+        /* Answer buttons */
         .button {
-            height: 100px;
-            width: 500px;
-            border-radius: 350px;
-            margin: 10px;
-            margin-left: 12%;
-            
-            margin-top: 40px;
+            height: 80px;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 50px;
+            margin: 10px auto;
+            display: block;
             background-color: #32245c;
             font-size: 25px;
             color: white;
             font-weight: bold;
+            text-align: center;
+        }
+
+
+        /* Responsive styles */
+        @media only screen and (max-width: 768px) {
+            .back-button {
+                font-size: 16px;
+                padding: 5px 9px;
+            }
+        }
+
+        /* Media Query for tablets */
+        @media screen and (max-width: 1024px) {
+            .start-button {
+                font-size: 40px;
+                width: 70%;
+            }
+
+            .display {
+                height: 180px;
+                font-size: 22px;
+            }
+
+            .text-display {
+                font-size: 40px;
+            }
+
+            .button {
+                height: 70px;
+                font-size: 22px;
+            }
+        }
+
+        /* Media Query for mobile devices */
+        @media screen and (max-width: 768px) {
+            .start-button {
+                font-size: 30px;
+                width: 90%;
+                height: 60px;
+            }
+
+            .display {
+                height: 150px;
+                font-size: 18px;
+            }
+
+            .text-display {
+                font-size: 30px;
+            }
+
+            .button {
+                height: 60px;
+                font-size: 18px;
+                width: 90%;
+            }
+        }
+
+        /* Media Query for small mobile devices */
+        @media screen and (max-width: 480px) {
+            .start-button {
+                font-size: 24px;
+                width: 95%;
+                height: 50px;
+            }
+
+            .display {
+                height: 120px;
+                font-size: 16px;
+            }
+
+            .text-display {
+                font-size: 24px;
+            }
+
+            .button {
+                height: 50px;
+                font-size: 16px;
+                width: 95%;
+            }
         }
     </style>
     <script>
@@ -377,6 +472,10 @@
 
 <body
     style="background-image: url(https://images.news18.com/webstories/2023/09/kbc23_int_14aug_landscape_thumb.jpg); height: 100%; width: 100vw; background-repeat: no-repeat;background-position: center;box-sizing: border-box;background-size: cover;background-attachment: fixed;">
+
+    <!-- /* Back button styling -->
+    <a href="project_js.html" class="back-button">&#8592; Back</a>
+
     <!-- Start button -->
     <button class="start-button" id="play-button" onclick="dostart()">PLAY</button>
     <!-- Display area for questions -->

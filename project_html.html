@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="./OIG1.jpeg" sizes="100x100"> <!-- Favicon for the webpage -->
-    <title>My Projects</title>
+    <title>My HTML Projects</title>
     <style>
         @keyframes changeColor {
             25% {
@@ -26,9 +26,14 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            /* background-color: #e4e4e4; */
-            background: linear-gradient(#000428, #004e92);
+            /* background-color: #ed0d0d; */
+            background: linear-gradient(#bdc3c7, #2c3e50);
             transition: background-color 0.3s ease;
+        }
+
+        /* Dark mode styling for the body */
+        body.dark-mode {
+            background-color: #333;
         }
 
         /* Back button styling */
@@ -37,7 +42,7 @@
             top: 20px;
             left: 20px;
             padding: 10px 15px;
-            background: #dc3545;
+            background: #090909;
             color: white;
             text-decoration: none;
             font-size: 18px;
@@ -46,10 +51,6 @@
             transition: 0.3s;
         }
 
-        /* Dark mode styling for the body */
-        body.dark-mode {
-            background-color: #333;
-        }
 
         /* Heading 1 styling */
         h1 {
@@ -246,7 +247,6 @@
         }
 
 
-
         /* Responsive styles */
         @media only screen and (max-width: 768px) {
             .back-button {
@@ -258,52 +258,48 @@
 </head>
 
 <body>
-
     <!-- Back Button (Positioned at the Top-Left) -->
-    <a href="index.html" class="back-button">&#8592; Back</a>
+    <a href="project.html" class="back-button">&#8592; Back</a>
 
     <h1>My Projects</h1> <!-- Main heading for the page -->
-
-
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search projects..." class="search-container">
+        <!-- Search input field -->
+    </div>
+    <div class="theme-switch-wrapper"> <!-- Theme switch wrapper -->
+        <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox"> <!-- Checkbox input for theme switch -->
+            <div class="slider round"></div> <!-- Slider for theme switch -->
+        </label>
+    </div>
     <main>
         <!-- Project cards section -->
 
         <div class="project">
-            <a href="project_js.html"><img
-                    src="https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_1280.png"
+            <a href="topthree.html"><img
+                    src="https://w0.peakpx.com/wallpaper/781/652/HD-wallpaper-dom-independence-day-dom-independence-india-republic-thumbnail.jpg"
                     alt="Top 3 freedom fighters of India "></a> <!-- Image link for the project -->
             <div class="project-description">
-                <p> Project</p> <!-- Project description -->
+                <p>Freedom Fighters of INDIA</p> <!-- Project description -->
             </div>
         </div>
         <div class="project">
-            <a href="bootstrap_js.html"><img
-                    src="https://cdn.iconscout.com/icon/free/png-512/free-bootstrap-logo-icon-download-in-svg-png-gif-file-formats--wordmark-programming-langugae-language-pack-logos-icons-1175203.png?f=webp&w=256"
+            <a href="flag.html"><img
+                    src="https://w0.peakpx.com/wallpaper/592/72/HD-wallpaper-indian-flag-flag-happy-independence-day-india-indian-nation-republic-day-thumbnail.jpg"
                     alt="India Flag"></a> <!-- Image link for the project -->
             <div class="project-description">
-                <p> Project</p> <!-- Project description -->
+                <p>INDIA Flag</p> <!-- Project description -->
             </div>
         </div>
         <div class="project">
-            <a href=""><img
-                    src="https://cdn.iconscout.com/icon/free/png-512/free-react-logo-icon-download-in-svg-png-gif-file-formats--company-brand-world-logos-vol-4-pack-icons-282599.png?f=webp&w=256"
+            <a href="one.html"><img
+                    src="https://img.freepik.com/free-vector/modern-online-registration-compositio_23-2147993866.jpg?size=626&ext=jpg&ga=GA1.1.893661214.1713419953&semt=ais"
                     alt="Registration page"></a> <!-- Image link for the project -->
             <div class="project-description">
-                <p> Project</p> <!-- Project description -->
+                <p>Registration Page</p> <!-- Project description -->
             </div>
         </div>
-
-        <div class="project">
-            <a href="manual.html"><img
-                    src="https://cdn.iconscout.com/icon/premium/png-512-thumb/manual-3903548-3253149.png?f=webp&w=256"
-                    alt="Registration page"></a> <!-- Image link for the project -->
-            <div class="project-description">
-                <p> Project</p> <!-- Project description -->
-            </div>
-        </div>
-
-
-
+    
     </main>
 
     <!-- JavaScript for theme switch functionality -->

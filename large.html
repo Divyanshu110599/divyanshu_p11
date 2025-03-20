@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #020202;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .container {
+            text-align: center;
+            padding: 30px;
+            border-radius: 8px;
+            background-color: rgb(94, 154, 154);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Compare Three Numbers</h1>
+        <label for="num1">Enter First Number: </label>
+        <input type="number" id="num1" name="num1"><br><br>
+
+        <label for="num2">Enter Second Number: </label>
+        <input type="number" id="num2" name="num2"><br><br>
+
+        <label for="num3">Enter Third Number: </label>
+        <input type="number" id="num3" name="num3"><br><br>
+
+        <button onclick="compareNumbers()">Compare</button>
+
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        function compareNumbers() {
+            // Get input values
+            const num1 = Number(document.getElementById('num1').value);
+            const num2 = Number(document.getElementById('num2').value);
+            const num3 = Number(document.getElementById('num3').value);
+
+
+            if (isNaN(Number)) {
+                document.getElementById('result').innerText = 'Please enter a valid number.';
+                return;
+            }
+
+            // Use ternary operator to find the largest number
+            let result = (num1 > num2 && num1 > num3) ? `${num1} is the largest number.` :
+                (num2 > num1 && num2 > num3) ? `${num2} is the largest number.` :
+                    (num3 > num1 && num3 > num2) ? `${num3} is the largest number.` :
+                        'Two or numbers are equal.';
+
+            // Display the result
+            document.getElementById('result').innerText = result;
+        }
+    </script>
+
+</body>
+
+</html>

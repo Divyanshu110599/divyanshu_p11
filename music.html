@@ -1,67 +1,58 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <style>
         body {
-            background-image: url(/assets/pexels-vishnurnair-1105666.jpg);
+            background-image: url(./assets/pexels-vishnurnair-1105666.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             margin: 0;
-
             padding: 0;
             height: 100vh;
-
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #000;
-
             overflow: hidden;
-
             font-family: Arial, sans-serif;
-
-
         }
 
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 15px;
+            background: #dc3545;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
 
         .container {
-
-            width: 500px;
-            height: 500px;
-
+            width: 90%;
+            max-width: 500px;
+            height: auto;
             text-align: center;
-
             padding: 20px;
-
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             background: linear-gradient(45deg, #66ff00, #ff0000, #0000ff, #ff0080);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
-
         }
 
         @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-
-            50% {
-                background-position: 100% 50%;
-            }
-
-            100% {
-                background-position: 0% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .controls {
-            margin-top: 200px;
-
+            margin-top: 20px;
         }
 
         .controls button {
@@ -74,61 +65,61 @@
             background-color: #000;
             color: #fff;
             font-family: Arial, sans-serif;
-
         }
 
         .controls input[type="range"] {
             width: 100%;
-
         }
 
         #songNameDisplay {
-            margin-top: 50px;
+            margin-top: 20px;
             font-size: 18px;
             font-weight: bold;
             color: white;
             font-family: Arial, sans-serif;
-
         }
 
         .songImage {
-            width: 100px;
-            height: 100px;
-            margin-bottom: 30px;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+            margin-left: 100px;
             display: none;
-            border-radius: 20px;
-            margin-left: 200px;
+            border-radius: 10px;
+        }
 
+        @media only screen and (max-width: 768px) {
+            .back-button {
+                font-size: 16px;
+                padding: 5px 9px;
+            }
+            .songImage {
+                max-width: 200px;
+            }
         }
     </style>
 </head>
 
 <body>
+    <a href="project_js.html" class="back-button">&#8592; Back</a>
     <div class="container">
         <div id="songNameDisplay"></div>
-        <!-- Song images with IDs for individual songs -->
-        <img id="songImage1" class="songImage" src="./assets/lapataladies.jpg" height="400px" width="700px">
-        <img id="songImage2" class="songImage" src="./assets/jawan.jpg" height="100px" width="100px">
-        <img id="songImage3" class="songImage" src="./assets/yimmy.jpg"height="100px" width="100px">
-
+        <img id="songImage1" class="songImage" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQPAQigFcssBJaq24TnvsQbwgnVywJ-mLWev97pMYKSjxGXwMou8vDNK_gvdWRI15UyOEZ02A">
+        <img id="songImage2" class="songImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7APvX2gQ2amSb_65ERRrUypwnUl2Fr863Yg&s">
+        <img id="songImage3" class="songImage" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQ1XtDfGkrtfv50e2LCWpc1YCZNuQdW2oI-KjKVWnwtSzoIs_GkJEuVSdAp4Mv80YN5ZJlfeu6-GVwJfGA27EdbT43lpinuNa9g8cQ1LQ">
         <div class="controls">
-            <!-- Control buttons and volume slider -->
             <button id="playPrevBtn">Previous</button>
             <button id="playPauseBtn">Play</button>
             <button id="playNextBtn">Next</button>
             <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" style="margin-top: 20px;">
         </div>
-
-        <!-- Audio element for music playback -->
         <audio id="audioPlayer" controls>
-            <source src="./assets/O Sajni Re.mp3" type="audio/mpeg">
-            <source src="./assets/Chaleya.mp3" type="audio/mpeg">
-            <source src="./assets/Yimmy Yimmy.mp3" type="audio/mpeg">
-            <!-- Add more <source> elements for additional songs -->
+            <source src="./assets/Dum-Hai-To-Rok-Ke-Bata .mp3" type="audio/mpeg">
+            <source src="./assets/The-Crown-Chhaava.mp3" type="audio/mpeg">
+            <source src="./assets/Maaye-Sky-Force.mp3" type="audio/mpeg">
         </audio>
     </div>
-
-    <!-- JavaScript to control music playback -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Get necessary elements from the DOM
@@ -195,5 +186,4 @@
         });
     </script>
 </body>
-
 </html>
